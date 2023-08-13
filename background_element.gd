@@ -13,7 +13,6 @@ func _ready():
 	
 func init():
 	player = get_tree().current_scene.find_child('Car')
-	INITIAL_OFFSET = position.y
 
 func next_position(delta):
 	return self.position.y + player.player_vertical_speed
