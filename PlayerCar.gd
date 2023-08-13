@@ -59,7 +59,7 @@ func move(delta):
 	#elapsed += delta
 	self.player_vertical_speed = BASE_PLAYER_SPEED.y * delta * speed_mult
 	self.world.distance += self.player_vertical_speed
-	self.find_child('ScoreText').text = str(int(self.world.distance))
+	self.find_child('ScoreText').text = str(int(self.world.distance / 1000))
 	self.position.x = new_x_pos
 
 func _physics_process(delta):
@@ -73,14 +73,17 @@ func move_and_rotate(target_position, target_rotation, duration):
 	tween.set_parallel(true) # So that the below tweens happen at the same time, not move then rotate
 	tween.tween_property(self, "global_position", target_position, duration)
 	tween.tween_property(self, "rotation", target_rotation, duration)
+	tween.tween_callback(test).set_delay(duration)
 
+func test():
+	get_tree().current_scene.start_game_over()
 
 func spinout(direction):
 	move_and_rotate(direction * Vector2(1200, 600) * .25, 
 		self.rotation + TAU * 2.64, spin_duration)
 
 func _on_hurtbox_body_entered(body):
-	if body.is_in_group("Enemy"):
+	if body.is_in_group("Enemy") and state != CarState.DEAD:
 		print("HIT")
 		state -= 1
 		body.spinout((body.position - self.position).normalized())
