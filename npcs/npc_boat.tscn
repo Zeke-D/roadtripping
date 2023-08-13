@@ -6,7 +6,7 @@
 
 [node name="npc_boat" type="CharacterBody2D" groups=["Enemy"]]
 script = ExtResource("1_xqrcb")
-speed = 110
+speed = 160
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-17, -31)
@@ -20,5 +20,7 @@ texture = ExtResource("2_qfn1j")
 [node name="ProjectileTimer" type="Timer" parent="."]
 autostart = true
 script = ExtResource("3_4cve2")
+lower_bounds = 1
+upper_bounds = 183
 
 [connection signal="timeout" from="ProjectileTimer" to="." method="_on_projectile_timer_timeout"]

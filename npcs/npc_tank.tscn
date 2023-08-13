@@ -9,7 +9,7 @@ size = Vector2(44, 95)
 
 [node name="npc_tank" type="CharacterBody2D" groups=["Enemy"]]
 script = ExtResource("1_40trv")
-speed = 20
+speed = 140
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3.5)

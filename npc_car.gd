@@ -1,8 +1,8 @@
 extends CharacterBody2D
 class_name NpcCar
 var player
-@export var speed: int = 80
-const NPC_BASE_MOVEMENT_SPEED: float = 80
+@export var speed: int
+
 
 # spin globals
 var did_spin = false
@@ -36,3 +36,5 @@ func spinout(direction):
 	self.find_child("CollisionShape2D").set_deferred("disabled",true)
 	# deactivate collider
 	move_and_rotate(direction * Vector2(1200, 600) * .5, self.rotation + TAU * 4, spin_duration)
+	if self.shooting:
+		self.shooting = false

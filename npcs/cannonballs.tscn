@@ -5,32 +5,32 @@
 
 [node name="cannonballs" type="Node2D" groups=["Projectile"]]
 
-[node name="cannonball" parent="." instance=ExtResource("1_kyj0l")]
+[node name="cannonball" parent="." groups=["Projectile_Single"] instance=ExtResource("1_kyj0l")]
 position = Vector2(16, -20)
 script = ExtResource("2_27fvj")
 side = 0
 
-[node name="cannonball2" parent="." instance=ExtResource("1_kyj0l")]
+[node name="cannonball2" parent="." groups=["Projectile_Single"] instance=ExtResource("1_kyj0l")]
 position = Vector2(16, -2)
 script = ExtResource("2_27fvj")
 side = 0
 
-[node name="cannonball3" parent="." instance=ExtResource("1_kyj0l")]
+[node name="cannonball3" parent="." groups=["Projectile_Single"] instance=ExtResource("1_kyj0l")]
 position = Vector2(16, 17)
 script = ExtResource("2_27fvj")
 side = 0
 
-[node name="cannonball4" parent="." instance=ExtResource("1_kyj0l")]
+[node name="cannonball4" parent="." groups=["Projectile_Single"] instance=ExtResource("1_kyj0l")]
 position = Vector2(-16, 17)
 script = ExtResource("2_27fvj")
 side = 1
 
-[node name="cannonball5" parent="." instance=ExtResource("1_kyj0l")]
+[node name="cannonball5" parent="." groups=["Projectile_Single"] instance=ExtResource("1_kyj0l")]
 position = Vector2(-16, -2)
 script = ExtResource("2_27fvj")
 side = 1
 
-[node name="cannonball6" parent="." instance=ExtResource("1_kyj0l")]
+[node name="cannonball6" parent="." groups=["Projectile_Single"] instance=ExtResource("1_kyj0l")]
 position = Vector2(-16, -20)
 script = ExtResource("2_27fvj")
 side = 1
