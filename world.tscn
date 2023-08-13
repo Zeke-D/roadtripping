@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4a0t2vn7bw41"]
+[gd_scene load_steps=10 format=3 uid="uid://c4a0t2vn7bw41"]
 
 [ext_resource type="PackedScene" uid="uid://dn2511q50ob5p" path="res://player_car.tscn" id="1_0pryi"]
 [ext_resource type="Script" path="res://oncoming_traffic.gd" id="1_3dc4a"]
@@ -62,6 +62,13 @@ z_index = 1
 
 [node name="Camera2D" type="Camera2D" parent="CanvasGroup/Car"]
 zoom = Vector2(2, 2)
+
+[node name="ScoreText" type="RichTextLabel" parent="CanvasGroup/Car"]
+offset_left = -247.0
+offset_top = -137.0
+offset_right = -207.0
+offset_bottom = -97.0
+text = "test"
 
 [node name="Background" parent="CanvasGroup" instance=ExtResource("3_5jjkl")]
 position = Vector2(-1, -186)

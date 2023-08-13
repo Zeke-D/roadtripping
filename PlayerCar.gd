@@ -2,9 +2,19 @@ extends CharacterBody2D
 
 const BASE_PLAYER_SPEED: Vector2 = Vector2(200, 200)
 var player_vertical_speed: float = 200
-
+var world 
 var CAR_WIDTH : float = 32;
-var ROAD_WIDTH : float = 32 * 10 - CAR_WIDTH;
+var ROAD_WIDTH : float = 49 * 4 - CAR_WIDTH;
+var elapsed = 0.0
+var spin_duration = 2
+var state = CarState.FULL_HP
+
+enum CarState {
+	DEAD,
+	ONE_LIFE,
+	TWO_LIFE,
+	FULL_HP,
+}
 
 enum World_Scroll_Speed {
 	FAST,
@@ -25,38 +35,52 @@ func _ready():
 	speed_mult_map[World_Scroll_Speed.MEDIUM] = 1.0;
 	speed_mult_map[World_Scroll_Speed.SLOW]   = 0.7;
 	
+	world = get_tree().current_scene
 	hurtbox = find_child("Hurtbox")
 
-
-func _physics_process(delta):
-	
+func move(delta):
 	var speed_mult = speed_mult_map[World_Scroll_Speed.MEDIUM]
 	
-	var new_pos = position
+	var new_x_pos = position.x
 	
 	if (Input.is_action_pressed("left")):
-		new_pos.x -= BASE_PLAYER_SPEED.x * delta
+		new_x_pos -= BASE_PLAYER_SPEED.x * delta
 	if (Input.is_action_pressed("right")):
-		new_pos.x += BASE_PLAYER_SPEED.x * delta
+		new_x_pos += BASE_PLAYER_SPEED.x * delta
 	if (Input.is_action_pressed("up")):
 		speed_mult = speed_mult_map[World_Scroll_Speed.FAST]
 	if (Input.is_action_pressed("down")):
 		speed_mult = speed_mult_map[World_Scroll_Speed.SLOW]
 	
-	new_pos.x = clamp(new_pos.x, ROAD_WIDTH / -2, ROAD_WIDTH / 2);
+	new_x_pos = clamp(new_x_pos, ROAD_WIDTH / -2, ROAD_WIDTH / 2);
 	
-	# check collisions
-	var should_move_horizontal : bool = true
-	var should_move_vertical   : bool = true
-	
-	player_vertical_speed = 0
-	if should_move_vertical:
-		player_vertical_speed = BASE_PLAYER_SPEED.y * delta * speed_mult
-	if should_move_horizontal:
-		position = new_pos
+	# will come back to u
+	# self.set_rotation(1/4 * PI * sin(elapsed))
+	#elapsed += delta
+	self.player_vertical_speed = BASE_PLAYER_SPEED.y * delta * speed_mult
+	self.world.distance += self.player_vertical_speed
+	self.position.x = new_x_pos
 
+func _physics_process(delta):
+	if state == CarState.DEAD:
+		self.player_vertical_speed = 0
+	else:
+		move(delta)
+
+func move_and_rotate(target_position, target_rotation, duration):
+	var tween = get_tree().create_tween()
+	tween.set_parallel(true) # So that the below tweens happen at the same time, not move then rotate
+	tween.tween_property(self, "global_position", target_position, duration)
+	tween.tween_property(self, "rotation", target_rotation, duration)
+
+
+func spinout(direction):
+	move_and_rotate(direction * Vector2(1200, 600) * .5, self.rotation + TAU * 4, spin_duration)
 
 func _on_hurtbox_body_entered(body):
 	if body.is_in_group("Enemy"):
 		print("HIT")
-		position += (position - body.position) / 10
+		state -= 1
+		body.spinout((body.position - self.position).normalized())
+		if state == CarState.DEAD:
+			self.spinout(-(body.position - self.position).normalized())
