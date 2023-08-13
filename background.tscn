@@ -4,17 +4,10 @@
 
 [node name="Background" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 101.6)
-scale = Vector2(0.08, 0.08)
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(0, 300)
 texture = ExtResource("1_be1s4")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(0, -666.4)
-scale = Vector2(0.08, 0.08)
-texture = ExtResource("1_be1s4")
-
-[node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(0, 768)
-scale = Vector2(0.08, 0.08)
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(0, -300)
 texture = ExtResource("1_be1s4")
