@@ -27,6 +27,7 @@ func fly_to_car():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	self.position = Vector2(100, -500);
 	player = get_tree().current_scene.find_child('Car')
 	anim_mgr = self.find_child("AnimationPlayer")
 	var fly_duration = 1

@@ -13,6 +13,7 @@ var npc_cop: PackedScene = load("res://npcs/npc_car_cop.tscn")
 var alien: PackedScene = load("res://npcs/alien_ship.tscn")
 
 var level_one_enemies: Dictionary = {
+	#alien: 100,
 	npc_car_blue: 40,
 	npc_car_purple: 40,
 	npc_taxi: 20,
@@ -21,9 +22,29 @@ var level_two_enemies: Dictionary = {
 	npc_cop: 100,
 }
 
-const level_three_enemies : Dictionary = {}
-const level_four_enemies  : Dictionary = {}
-const level_five_enemies  : Dictionary = {}
+var level_three_enemies : Dictionary = {
+	npc_car_blue: 30,
+	npc_car_purple: 30,
+	npc_taxi: 20,
+	npc_tank: 20,
+}
+
+var level_four_enemies : Dictionary = {
+	npc_car_blue: 20,
+	npc_car_purple: 20,
+	npc_taxi: 20,
+	npc_tank: 20,
+	npc_boat: 20,
+}
+
+var level_five_enemies : Dictionary = {
+	npc_car_blue: 20,
+	npc_car_purple: 20,
+	npc_taxi: 10,
+	npc_tank: 10,
+	npc_boat: 20,
+	alien: 20,
+}
 
 var LEVEL_ONE   = Level.new( 5000,  "Grass", level_one_enemies)
 var LEVEL_TWO   = Level.new( 5000,  "Grass", level_two_enemies)
