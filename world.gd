@@ -14,12 +14,16 @@ func _ready():
 	background_root = self.find_child("Background")
 
 func handle_background():
-	for background in global.backgrounds:
-		if background == global.level_background[global.level]:
-			self.find_child("CanvasGroup").find_child("Background").find_child(background).show()
-		else:
-			self.find_child("CanvasGroup").find_child("Background").find_child(background).hide()
-
+	
+	var bg = self.find_child("CanvasGroup").find_child("Background")
+	
+	for bg_element in bg.get_children():
+		bg_element.hide()	
+	
+	bg.find_child(global.levels[global.level].bg_name).show()
+	bg.find_child("road").show()
+	bg.find_child("road_2").show()
+		
 func _physics_process(delta):
 	
 	if (count % 10 == 0 && game_over == true):
@@ -32,13 +36,15 @@ func _physics_process(delta):
 		var new_sign = highway_sign.instantiate()
 		new_sign.position = Vector2(100, -500);
 		new_sign.scale = Vector2(.5, .5);
-		new_sign.mile_text = str(int(global.goal_distances[global.level] - global.distance) / 1000) + " mi."
+		new_sign.mile_text = str(
+			int(global.levels[global.level].distance - global.distance) / 1000
+			) + " mi."
 		get_tree().current_scene.add_child(new_sign)
 		new_sign.init()
 		last_highway_sign = global.distance
 		
 	
-	if (global.distance >= global.goal_distances[global.level]):
+	if (global.distance >= global.levels[global.level].distance):
 		get_tree().change_scene_to_file("res://Main Scenes/checkpoint.tscn")
 		global.level += 1
 
