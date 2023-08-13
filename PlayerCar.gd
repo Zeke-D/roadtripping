@@ -31,7 +31,7 @@ func _ready():
 	#init speed_mult_map
 	for i in range(World_Scroll_Speed.LENGTH):
 		speed_mult_map.append(1.);
-	speed_mult_map[World_Scroll_Speed.FAST]   = 1.5;
+	speed_mult_map[World_Scroll_Speed.FAST]   = 2.0;
 	speed_mult_map[World_Scroll_Speed.MEDIUM] = 1.0;
 	speed_mult_map[World_Scroll_Speed.SLOW]   = 0.7;
 	
@@ -76,7 +76,8 @@ func move_and_rotate(target_position, target_rotation, duration):
 
 
 func spinout(direction):
-	move_and_rotate(direction * Vector2(1200, 600) * .5, self.rotation + TAU * 4, spin_duration)
+	move_and_rotate(direction * Vector2(1200, 600) * .25, 
+		self.rotation + TAU * 2.64, spin_duration)
 
 func _on_hurtbox_body_entered(body):
 	if body.is_in_group("Enemy"):
