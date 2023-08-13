@@ -204,6 +204,7 @@ position = Vector2(0, -320)
 texture = ExtResource("2_kugdb")
 
 [node name="Desert" type="CanvasGroup" parent="."]
+visible = false
 z_index = -2
 position = Vector2(-136, 520)
 

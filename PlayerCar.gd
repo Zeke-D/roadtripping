@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const BASE_PLAYER_SPEED: Vector2 = Vector2(200, 300)
+const BASE_PLAYER_SPEED: Vector2 = Vector2(250, 300)
 var player_vertical_speed: float = 200
 var world 
 var CAR_WIDTH : float = 32;
