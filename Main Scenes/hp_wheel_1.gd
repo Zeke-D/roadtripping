@@ -13,7 +13,7 @@ func _ready():
 		threshold = 3
 
 func _physics_process(delta):
-	if player.state < threshold:
+	if global.player_health < threshold:
 		self.hide()
 	else:
 		self.show()

@@ -7,7 +7,6 @@ var CAR_WIDTH : float = 32;
 var ROAD_WIDTH : float = 49 * 4 - CAR_WIDTH;
 var elapsed = 0.0
 var spin_duration = 1.5
-var state = CarState.FULL_HP
 
 enum CarState {
 	DEAD,
@@ -23,25 +22,17 @@ enum World_Scroll_Speed {
 	LENGTH
 }
 
-var speed_mult_map : Array[float] = [];
 var hurtbox;
 
 func _ready():
 	get_tree().current_scene.find_child("Sounds").find_child("Idle_sound").play()
 	global.distance = 0
 	
-	#init speed_mult_map
-	for i in range(World_Scroll_Speed.LENGTH):
-		speed_mult_map.append(1.);
-	speed_mult_map[World_Scroll_Speed.FAST]   = 2.0;
-	speed_mult_map[World_Scroll_Speed.MEDIUM] = 1.0;
-	speed_mult_map[World_Scroll_Speed.SLOW]   = 0.7;
-	
 	world = get_tree().current_scene
 	hurtbox = find_child("Hurtbox")
 
 func move(delta):
-	var speed_mult = speed_mult_map[World_Scroll_Speed.MEDIUM]
+	var speed_mult = 1
 	
 	var new_x_pos = position.x
 	
@@ -50,9 +41,9 @@ func move(delta):
 	if (Input.is_action_pressed("right")):
 		new_x_pos += BASE_PLAYER_SPEED.x * delta
 	if (Input.is_action_pressed("up")):
-		speed_mult = speed_mult_map[World_Scroll_Speed.FAST]
+		speed_mult = global.boost_multiplier
 	if (Input.is_action_pressed("down")):
-		speed_mult = speed_mult_map[World_Scroll_Speed.SLOW]
+		speed_mult = global.break_multiplier
 	
 	new_x_pos = clamp(new_x_pos, ROAD_WIDTH / -2, ROAD_WIDTH / 2);
 	
@@ -65,7 +56,7 @@ func move(delta):
 	self.position.x = new_x_pos
 
 func _physics_process(delta):
-	if state == CarState.DEAD:
+	if global.player_health == CarState.DEAD:
 		self.player_vertical_speed = 0
 	else:
 		move(delta)
@@ -90,7 +81,7 @@ func spinout(direction):
 func take_damage(body):
 	
 	if body.is_in_group("Police"):
-		state = CarState.DEAD
+		global.player_health = CarState.DEAD
 	
 	if body.is_in_group("Civilian") and !global.police_chase:
 		get_tree().current_scene.find_child("Spawner").spawn_cop(self.position + Vector2(0, 400))
@@ -98,17 +89,17 @@ func take_damage(body):
 	if body.is_in_group("Enemy"):
 		print("HIT")
 		get_tree().current_scene.find_child("Sounds").find_child("Car_hit").play()
-		state -= 1
+		global.player_health -= 1
 	
 	if body.is_in_group("Spinner"):
 		body.spinout((body.position - self.position).normalized())
 	if body.is_in_group("Projectile"):
-		state -= 1
+		global.player_health -= 1
 		body.queue_free()
 		body.get_parent().queue_free()
 	if body.is_in_group("Projectile_Single"):
-		state -= 1
+		global.player_health -= 1
 		body.queue_free()
 		body.get_parent().queue_free()
-	if state == CarState.DEAD:
+	if global.player_health == CarState.DEAD:
 		self.spinout(-(body.position - self.position).normalized())
