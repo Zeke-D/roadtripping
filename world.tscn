@@ -110,7 +110,7 @@ stream = ExtResource("5_fooi5")
 
 [node name="alien_ship" parent="Alien_Spawner" instance=ExtResource("8_wskmv")]
 z_index = 1
-position = Vector2(0, -92)
+position = Vector2(1, -198)
 scale = Vector2(3, 3)
 script = ExtResource("9_tt732")
 
