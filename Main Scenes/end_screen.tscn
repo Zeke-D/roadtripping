@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://tfvpp1pcykxw"]
+[gd_scene load_steps=7 format=3 uid="uid://tfvpp1pcykxw"]
 
 [ext_resource type="Script" path="res://Main Scenes/end_screen.gd" id="1_u4ru3"]
 [ext_resource type="Script" path="res://EndScreenScore.gd" id="2_5srxe"]
+[ext_resource type="Texture2D" uid="uid://hqbnsopw4x6r" path="res://Assets/UI/restart_button.png" id="3_2joou"]
+[ext_resource type="Texture2D" uid="uid://cohlcwi0htnaf" path="res://Assets/UI/death_Screen.png" id="4_b3ltg"]
+[ext_resource type="Texture2D" uid="uid://cqru42bw8wqwv" path="res://Assets/UI/main_menu_button.png" id="5_mfi1j"]
+[ext_resource type="Script" path="res://Main Scenes/Button2.gd" id="6_134rw"]
 
 [node name="EndScreen" type="Control"]
 layout_mode = 3
@@ -11,15 +15,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_u4ru3")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 0
-offset_left = 605.0
-offset_top = 155.0
-offset_right = 755.0
-offset_bottom = 195.0
-text = "GAME OVER"
 
 [node name="EndScreenScore" type="RichTextLabel" parent="."]
 custom_minimum_size = Vector2(169, 0)
@@ -32,10 +27,25 @@ script = ExtResource("2_5srxe")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 619.0
+offset_left = 525.0
 offset_top = 293.0
-offset_right = 694.0
-offset_bottom = 324.0
-text = "RESTART"
+offset_right = 676.0
+offset_bottom = 348.0
+icon = ExtResource("3_2joou")
+
+[node name="DeathScreen" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(600, 300)
+texture = ExtResource("4_b3ltg")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 525.0
+offset_top = 400.0
+offset_right = 676.0
+offset_bottom = 455.0
+icon = ExtResource("5_mfi1j")
+script = ExtResource("6_134rw")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]

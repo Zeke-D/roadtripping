@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://q1rmedw22cdn"]
+[gd_scene load_steps=4 format=3 uid="uid://q1rmedw22cdn"]
 
 [ext_resource type="Script" path="res://Main Scenes/start_button.gd" id="1_ewvos"]
+[ext_resource type="Texture2D" uid="uid://c0ss1lyela5as" path="res://Assets/UI/start_screen.png" id="1_qr3u7"]
+[ext_resource type="Texture2D" uid="uid://cyr5obtho33vf" path="res://Assets/UI/start_button.png" id="2_81lhm"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,23 +12,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 384.0
-offset_top = 288.0
-offset_right = 814.0
-offset_bottom = 343.0
-alignment = 1
+[node name="StartScreen" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(600, 300)
+texture = ExtResource("1_qr3u7")
 
-[node name="StartButton" type="Button" parent="VBoxContainer"]
+[node name="StartButton" type="Button" parent="."]
 layout_mode = 2
-text = "START"
+offset_left = 521.0
+offset_top = 407.0
+offset_right = 670.0
+offset_bottom = 460.0
+icon = ExtResource("2_81lhm")
 script = ExtResource("1_ewvos")
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="Button3" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-
-[connection signal="pressed" from="VBoxContainer/StartButton" to="VBoxContainer/StartButton" method="_on_pressed"]
+[connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]
