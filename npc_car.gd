@@ -26,6 +26,8 @@ func _ready():
 
 func _physics_process(delta):
 	position = get_next_position(delta)
+	if position[1] < -495:
+		self.queue_free()
 
 func move_and_rotate(target_position, target_rotation, duration):
 	var tween = get_tree().create_tween()
