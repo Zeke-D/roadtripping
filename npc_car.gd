@@ -8,6 +8,9 @@ var player
 var did_spin = false
 var spin_duration = 2.
 
+# can shoot?
+var shooting = false
+
 func get_next_position(delta):
 	if did_spin:
 		return self.position + Vector2(0, player.player_vertical_speed)

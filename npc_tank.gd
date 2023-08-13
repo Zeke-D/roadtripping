@@ -1,7 +1,7 @@
 extends NpcCar
 
 var rocket = load("res://npcs/rocket.tscn")
-
+self.shooting = true
 func shoot():
-	var projectile = rocket.instantiate()
-	self.add_child(projectile)
+	if shooting:
+		vaelf.add_child(projectile)

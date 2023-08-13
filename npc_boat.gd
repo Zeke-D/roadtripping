@@ -1,7 +1,7 @@
 extends NpcCar
 
 var cannonballs: PackedScene = load("res://npcs/cannonballs.tscn")
-var shooting = true
+self.shooting = true
 func shoot():
 	var projectiles = cannonballs.instantiate()
 

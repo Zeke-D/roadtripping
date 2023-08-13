@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c4a0t2vn7bw41"]
+[gd_scene load_steps=17 format=3 uid="uid://c4a0t2vn7bw41"]
 
 [ext_resource type="PackedScene" uid="uid://dn2511q50ob5p" path="res://player_car.tscn" id="1_0pryi"]
 [ext_resource type="Script" path="res://oncoming_traffic.gd" id="1_3dc4a"]
@@ -11,7 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://b1k377ojstc7f" path="res://Sounds/RT_Car_Crash2.mp3" id="6_74mx0"]
 [ext_resource type="Script" path="res://traffic_timer.gd" id="8_5lghh"]
 [ext_resource type="PackedScene" path="res://npcs/npc_car_cop.tscn" id="8_757vp"]
-[ext_resource type="PackedScene" uid="uid://df71bmc3v0pe8" path="res://npcs/alien_ship.tscn" id="8_wskmv"]
+[ext_resource type="PackedScene" path="res://npcs/alien_ship.tscn" id="8_wskmv"]
 [ext_resource type="Script" path="res://npcs/alien_ship.gd" id="9_tt732"]
 [ext_resource type="AudioStream" uid="uid://dtw5n6etea3gd" path="res://Sounds/police-siren-99029.mp3" id="10_xu3sg"]
 
@@ -110,7 +110,6 @@ volume_db = -0.57
 [node name="Death_sound" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("5_fooi5")
 
-[connection signal="timeout" from="TrafficTimer" to="Spawner" method="_on_traffic_timer_timeout"]
 [node name="Alien_Spawner" type="Node" parent="."]
 
 [node name="alien_ship" parent="Alien_Spawner" instance=ExtResource("8_wskmv")]
@@ -119,3 +118,4 @@ position = Vector2(134, -363)
 scale = Vector2(3, 3)
 script = ExtResource("9_tt732")
 
+[connection signal="timeout" from="TrafficTimer" to="Spawner" method="_on_traffic_timer_timeout"]
