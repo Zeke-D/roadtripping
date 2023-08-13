@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c4a0t2vn7bw41"]
+[gd_scene load_steps=16 format=3 uid="uid://c4a0t2vn7bw41"]
 
 [ext_resource type="PackedScene" uid="uid://dn2511q50ob5p" path="res://player_car.tscn" id="1_0pryi"]
 [ext_resource type="Script" path="res://oncoming_traffic.gd" id="1_3dc4a"]
@@ -10,9 +10,9 @@
 [ext_resource type="Script" path="res://wrapping_background.gd" id="5_gykqv"]
 [ext_resource type="AudioStream" uid="uid://b1k377ojstc7f" path="res://Sounds/RT_Car_Crash2.mp3" id="6_74mx0"]
 [ext_resource type="Script" path="res://timer.gd" id="6_ehp6s"]
-[ext_resource type="AudioStream" uid="uid://dtw5n6etea3gd" path="res://Sounds/police-siren-99029.mp3" id="10_xu3sg"]
 [ext_resource type="PackedScene" uid="uid://df71bmc3v0pe8" path="res://npcs/alien_ship.tscn" id="8_wskmv"]
 [ext_resource type="Script" path="res://npcs/alien_ship.gd" id="9_tt732"]
+[ext_resource type="AudioStream" uid="uid://dtw5n6etea3gd" path="res://Sounds/police-siren-99029.mp3" id="10_xu3sg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rssb8"]
 texture = ExtResource("1_tlry5")
@@ -106,11 +106,12 @@ volume_db = -0.57
 
 [node name="Death_sound" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("5_fooi5")
+
 [node name="Alien_Spawner" type="Node" parent="."]
 
 [node name="alien_ship" parent="Alien_Spawner" instance=ExtResource("8_wskmv")]
 z_index = 1
-position = Vector2(1, -198)
+position = Vector2(134, -363)
 scale = Vector2(3, 3)
 script = ExtResource("9_tt732")
 

@@ -87,19 +87,22 @@ func spinout(direction):
 		self.rotation + TAU * 2.64, spin_duration)
 
 
-
 func take_damage(body):
+	
+	if body.is_in_group("Police"):
+		state = CarState.DEAD
+	
+	if body.is_in_group("Civilian") and !global.police_chase:
+		get_tree().current_scene.find_child("Spawner").spawn_cop(self.position + Vector2(0, 400))
+	
+	if body.is_in_group("Enemy"):
+		print("HIT")
+		get_tree().current_scene.find_child("Sounds").find_child("Car_hit").play()
+		state -= 1
+	
+	if body.is_in_group("Spinner"):
+		body.spinout((body.position - self.position).normalized())
 
 	if state == CarState.DEAD:
 		self.spinout(-(body.position - self.position).normalized())
 		return
-	elif body.is_in_group("Police"):
-		state = 0
-	elif body.is_in_group("Civilian") and !global.police_chase:
-		get_tree().current_scene.find_child("Spawner").spawn_cop(self.position + Vector2(0, 400))
-	elif body.is_in_group("Enemy"):
-		print("HIT")
-		get_tree().current_scene.find_child("Sounds").find_child("Car_hit").play()
-		state -= 1
-		if body.is_in_group("Spinner"):
-			body.spinout((body.position - self.position).normalized())
