@@ -1,8 +1,8 @@
 extends CharacterBody2D
 class_name NpcCopCar
 var player
-@export var speed: int = 2000
-const NPC_BASE_MOVEMENT_SPEED: float = 500
+@export var speed: int = 100000
+const NPC_BASE_MOVEMENT_SPEED: float = 400
 const NPC_INITIAL_CHASE_SPEED: float = 100000
 const COP_HORIZONTAL_SPEED: float = 5
 # spin globals
