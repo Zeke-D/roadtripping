@@ -30,6 +30,9 @@ func _ready():
 func _physics_process(delta):
 	position = get_next_position(delta)
 	check_offscreen()
+	
+	if position.y < -200:
+		position = get_tree().current_scene.find_child("Car").position + Vector2(0, 400)
 
 func check_offscreen():
 	if(self.position.y > player.position.y + 400 and offscreen == false):

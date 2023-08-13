@@ -21,9 +21,9 @@ func create_obstacle(pos, obstacle):
 	print(npc.position)
 	self.add_child(npc)
 
-func spawn_cop(pos):
+func spawn_cop():
 	var npcCar = global.npc_cop.instantiate()
-	npcCar.position = pos
+	npcCar.position = get_tree().current_scene.find_child("Car").position + Vector2(0, 400)
 	self.add_child(npcCar)
 
 func _on_traffic_timer_timeout():

@@ -84,7 +84,7 @@ func take_damage(body):
 		global.player_health = CarState.DEAD
 	
 	if body.is_in_group("Civilian") and !global.police_chase:
-		get_tree().current_scene.find_child("Spawner").spawn_cop(self.position + Vector2(0, 400))
+		get_tree().current_scene.find_child("Spawner").spawn_cop()
 	
 	if body.is_in_group("Enemy"):
 		print("HIT")
