@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bp6v3g2sv3byt"]
+[gd_scene load_steps=9 format=3 uid="uid://bp6v3g2sv3byt"]
 
 [ext_resource type="Texture2D" path="res://Assets/SpaceShooterAssetPack_Ships.png" id="1_hx41h"]
+[ext_resource type="Script" path="res://npcs/alien_ship.gd" id="1_wr6jl"]
 [ext_resource type="Texture2D" path="res://Assets/SpaceShooterAssetPack_Projectiles.png" id="2_duijc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a7nin"]
@@ -109,6 +110,8 @@ _data = {
 
 [node name="Ship" type="Node2D"]
 z_index = 2
+scale = Vector2(3, 3)
+script = ExtResource("1_wr6jl")
 
 [node name="Zap-hitbox" type="Area2D" parent="." groups=["Enemy"]]
 

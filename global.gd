@@ -13,7 +13,6 @@ var npc_cop: PackedScene = load("res://npcs/npc_car_cop.tscn")
 var alien: PackedScene = load("res://npcs/alien_ship.tscn")
 
 var level_one_enemies: Dictionary = {
-	#alien: 100,
 	npc_car_blue: 40,
 	npc_car_purple: 40,
 	npc_taxi: 20,

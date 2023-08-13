@@ -3,14 +3,7 @@ extends Node2D
 @export var num_attacks = 3
 
 var anim_mgr
-var ship_state : ShipState
 var player
-
-enum ShipState {
-	Enter,
-	Attack,
-	Leave
-}
 
 func move_and_rotate(target_position, target_rotation, duration):
 	var tween = get_tree().create_tween()
@@ -27,6 +20,7 @@ func fly_to_car():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print("Added alien")
 	self.position = Vector2(100, -500);
 	player = get_tree().current_scene.find_child('Car')
 	anim_mgr = self.find_child("AnimationPlayer")

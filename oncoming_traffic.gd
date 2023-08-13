@@ -15,14 +15,16 @@ func get_obstacle(index):
 			return obstacle
 
 func create_obstacle(pos, obstacle):
-	var npcCar = obstacle.instantiate()
-	npcCar.position = pos
-	get_parent().add_child(npcCar)
+	print("Adding obstacle...")
+	var npc = obstacle.instantiate()
+	npc.position = pos
+	print(npc.position)
+	self.add_child(npc)
 
 func spawn_cop(pos):
 	var npcCar = global.npc_cop.instantiate()
 	npcCar.position = pos
-	get_parent().add_child(npcCar)
+	self.add_child(npcCar)
 
 func _on_traffic_timer_timeout():
 	var lane_to_spawn = randi() % 4
