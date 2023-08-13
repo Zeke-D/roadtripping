@@ -2,7 +2,7 @@ extends Node2D
 
 
 
-var WIDTH: int = 49
+var WIDTH: int = 50
 var LANE_ONE_X: int = -73
 
 var npc_car_blue: PackedScene = load("res://npcs/npc_car_blue.tscn")
@@ -31,16 +31,16 @@ func get_obstacle(index):
 		if index <= acc:
 			return obstacle
 
-func create_obstacle(position, obstacle):
-	var npcCar: NpcCar = obstacle.instantiate()
-	npcCar.position = position
+func create_obstacle(pos, obstacle):
+	var npcCar = obstacle.instantiate()
+	npcCar.position = pos
 	get_parent().add_child(npcCar)
-	print(position)
+	print(pos)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _on_timer_timeout():
 	print('timer done')
 	var lane_to_spawn = randi() % 4
-	var rand_obstacle = randi() % 99
+	var rand_obstacle = randi() % 100
 	create_obstacle(get_lane(lane_to_spawn), get_obstacle(rand_obstacle))

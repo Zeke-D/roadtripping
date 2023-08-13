@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://jc02a36m21ag"]
+[gd_scene load_steps=4 format=3 uid="uid://jc02a36m21ag"]
 
 [ext_resource type="Texture2D" uid="uid://c5wysrwsjbryn" path="res://Assets/highway.png" id="1_be1s4"]
+[ext_resource type="Texture2D" uid="uid://de5mp8ehdq5us" path="res://Assets/IMG_0101.PNG" id="2_kugdb"]
+[ext_resource type="Texture2D" uid="uid://crcqvp8ofenf7" path="res://Assets/IMG_0102.PNG" id="3_esl6y"]
 
 [node name="Background" type="Node2D"]
 
@@ -11,3 +13,998 @@ texture = ExtResource("1_be1s4")
 [node name="Sprite2D6" type="Sprite2D" parent="."]
 position = Vector2(0, -300)
 texture = ExtResource("1_be1s4")
+
+[node name="Grass" type="CanvasGroup" parent="."]
+visible = false
+position = Vector2(258, 450)
+scale = Vector2(1, 0.937)
+
+[node name="Node2D2" type="Node2D" parent="Grass"]
+position = Vector2(482, 0)
+
+[node name="Img0104" type="Sprite2D" parent="Grass/Node2D2"]
+z_index = -1
+position = Vector2(-488, 0)
+scale = Vector2(1, 1)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0101" type="Sprite2D" parent="Grass/Node2D2/Img0104"]
+z_index = -1
+position = Vector2(0, -320)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0102" type="Sprite2D" parent="Grass/Node2D2"]
+z_index = -1
+position = Vector2(-488, -640)
+scale = Vector2(1, 1)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0101" type="Sprite2D" parent="Grass/Node2D2/Img0102"]
+z_index = -1
+position = Vector2(0, -320)
+texture = ExtResource("2_kugdb")
+
+[node name="Node2D3" type="Node2D" parent="Grass"]
+position = Vector2(794, 0)
+
+[node name="Img0104" type="Sprite2D" parent="Grass/Node2D3"]
+z_index = -1
+position = Vector2(-488, 0)
+scale = Vector2(1, 1)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0101" type="Sprite2D" parent="Grass/Node2D3/Img0104"]
+z_index = -1
+position = Vector2(0, -320)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0102" type="Sprite2D" parent="Grass/Node2D3"]
+z_index = -1
+position = Vector2(-488, -640)
+scale = Vector2(1, 1)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0101" type="Sprite2D" parent="Grass/Node2D3/Img0102"]
+z_index = -1
+position = Vector2(0, -320)
+texture = ExtResource("2_kugdb")
+
+[node name="Node2D4" type="Node2D" parent="Grass"]
+position = Vector2(1103, 0)
+
+[node name="Img0104" type="Sprite2D" parent="Grass/Node2D4"]
+z_index = -1
+position = Vector2(-488, 0)
+scale = Vector2(1, 1)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0101" type="Sprite2D" parent="Grass/Node2D4/Img0104"]
+z_index = -1
+position = Vector2(0, -320)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0102" type="Sprite2D" parent="Grass/Node2D4"]
+z_index = -1
+position = Vector2(-488, -640)
+scale = Vector2(1, 1)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0101" type="Sprite2D" parent="Grass/Node2D4/Img0102"]
+z_index = -1
+position = Vector2(0, -320)
+texture = ExtResource("2_kugdb")
+
+[node name="Node2D5" type="Node2D" parent="Grass"]
+position = Vector2(1423, 0)
+
+[node name="Img0104" type="Sprite2D" parent="Grass/Node2D5"]
+z_index = -1
+position = Vector2(-488, 0)
+scale = Vector2(1, 1)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0101" type="Sprite2D" parent="Grass/Node2D5/Img0104"]
+z_index = -1
+position = Vector2(0, -320)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0102" type="Sprite2D" parent="Grass/Node2D5"]
+z_index = -1
+position = Vector2(-488, -640)
+scale = Vector2(1, 1)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0101" type="Sprite2D" parent="Grass/Node2D5/Img0102"]
+z_index = -1
+position = Vector2(0, -320)
+texture = ExtResource("2_kugdb")
+
+[node name="Node2D6" type="Node2D" parent="Grass"]
+position = Vector2(-968, 0)
+
+[node name="Img0104" type="Sprite2D" parent="Grass/Node2D6"]
+z_index = -1
+position = Vector2(-488, 0)
+scale = Vector2(1, 1)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0101" type="Sprite2D" parent="Grass/Node2D6/Img0104"]
+z_index = -1
+position = Vector2(0, -320)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0102" type="Sprite2D" parent="Grass/Node2D6"]
+z_index = -1
+position = Vector2(-488, -640)
+scale = Vector2(1, 1)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0101" type="Sprite2D" parent="Grass/Node2D6/Img0102"]
+z_index = -1
+position = Vector2(0, -320)
+texture = ExtResource("2_kugdb")
+
+[node name="Node2D7" type="Node2D" parent="Grass"]
+position = Vector2(-656, 0)
+
+[node name="Img0104" type="Sprite2D" parent="Grass/Node2D7"]
+z_index = -1
+position = Vector2(-488, 0)
+scale = Vector2(1, 1)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0101" type="Sprite2D" parent="Grass/Node2D7/Img0104"]
+z_index = -1
+position = Vector2(0, -320)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0102" type="Sprite2D" parent="Grass/Node2D7"]
+z_index = -1
+position = Vector2(-488, -640)
+scale = Vector2(1, 1)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0101" type="Sprite2D" parent="Grass/Node2D7/Img0102"]
+z_index = -1
+position = Vector2(0, -320)
+texture = ExtResource("2_kugdb")
+
+[node name="Node2D8" type="Node2D" parent="Grass"]
+position = Vector2(-347, 0)
+
+[node name="Img0104" type="Sprite2D" parent="Grass/Node2D8"]
+z_index = -1
+position = Vector2(-488, 0)
+scale = Vector2(1, 1)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0101" type="Sprite2D" parent="Grass/Node2D8/Img0104"]
+z_index = -1
+position = Vector2(0, -320)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0102" type="Sprite2D" parent="Grass/Node2D8"]
+z_index = -1
+position = Vector2(-488, -640)
+scale = Vector2(1, 1)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0101" type="Sprite2D" parent="Grass/Node2D8/Img0102"]
+z_index = -1
+position = Vector2(0, -320)
+texture = ExtResource("2_kugdb")
+
+[node name="Node2D9" type="Node2D" parent="Grass"]
+position = Vector2(-26.9999, 0)
+
+[node name="Img0104" type="Sprite2D" parent="Grass/Node2D9"]
+z_index = -1
+position = Vector2(-488, 0)
+scale = Vector2(1, 1)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0101" type="Sprite2D" parent="Grass/Node2D9/Img0104"]
+z_index = -1
+position = Vector2(0, -320)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0102" type="Sprite2D" parent="Grass/Node2D9"]
+z_index = -1
+position = Vector2(-488, -640)
+scale = Vector2(1, 1)
+texture = ExtResource("2_kugdb")
+
+[node name="Img0101" type="Sprite2D" parent="Grass/Node2D9/Img0102"]
+z_index = -1
+position = Vector2(0, -320)
+texture = ExtResource("2_kugdb")
+
+[node name="Desert" type="CanvasGroup" parent="."]
+z_index = -2
+position = Vector2(-136, 520)
+
+[node name="Node2D" type="Node2D" parent="Desert"]
+
+[node name="des_tex3" type="Sprite2D" parent="Desert/Node2D"]
+z_index = -1
+position = Vector2(373, -440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D/des_tex3"]
+z_index = -1
+position = Vector2(-57, 0)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex3" type="Sprite2D" parent="Desert/Node2D/des_tex3"]
+z_index = -1
+position = Vector2(100, 279)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D/des_tex3/des_tex3"]
+z_index = -1
+position = Vector2(-157, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D/des_tex3"]
+z_index = -1
+position = Vector2(44, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D/des_tex3/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D/des_tex3/des_tex2"]
+z_index = -1
+position = Vector2(0, -3)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D/des_tex3/des_tex2/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex4" type="Sprite2D" parent="Desert/Node2D/des_tex3"]
+z_index = -1
+position = Vector2(44, 127)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D/des_tex3/des_tex4"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex5" type="Sprite2D" parent="Desert/Node2D/des_tex3"]
+z_index = -2
+position = Vector2(-57, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex4" type="Sprite2D" parent="Desert/Node2D"]
+z_index = -1
+position = Vector2(373, -1040)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D/des_tex4"]
+z_index = -1
+position = Vector2(-57, 0)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex3" type="Sprite2D" parent="Desert/Node2D/des_tex4"]
+z_index = -1
+position = Vector2(100, 279)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D/des_tex4/des_tex3"]
+z_index = -1
+position = Vector2(-157, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D/des_tex4"]
+z_index = -1
+position = Vector2(44, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D/des_tex4/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D/des_tex4/des_tex2"]
+z_index = -1
+position = Vector2(0, -3)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D/des_tex4/des_tex2/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex4" type="Sprite2D" parent="Desert/Node2D/des_tex4"]
+z_index = -1
+position = Vector2(44, 127)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D/des_tex4/des_tex4"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex5" type="Sprite2D" parent="Desert/Node2D/des_tex4"]
+z_index = -2
+position = Vector2(-57, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="Node2D2" type="Node2D" parent="Desert"]
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D2"]
+z_index = -1
+position = Vector2(-44, -440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D2/des_tex"]
+z_index = -1
+position = Vector2(-57, 0)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex3" type="Sprite2D" parent="Desert/Node2D2/des_tex"]
+z_index = -1
+position = Vector2(100, 279)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D2/des_tex/des_tex3"]
+z_index = -1
+position = Vector2(-157, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D2/des_tex"]
+z_index = -1
+position = Vector2(44, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D2/des_tex/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D2/des_tex/des_tex2"]
+z_index = -1
+position = Vector2(0, -3)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D2/des_tex/des_tex2/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex4" type="Sprite2D" parent="Desert/Node2D2/des_tex"]
+z_index = -1
+position = Vector2(44, 127)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D2/des_tex/des_tex4"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex5" type="Sprite2D" parent="Desert/Node2D2/des_tex"]
+z_index = -2
+position = Vector2(-57, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D2"]
+z_index = -1
+position = Vector2(-44, -1040)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D2/des_tex2"]
+z_index = -1
+position = Vector2(-57, 0)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex3" type="Sprite2D" parent="Desert/Node2D2/des_tex2"]
+z_index = -1
+position = Vector2(100, 279)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D2/des_tex2/des_tex3"]
+z_index = -1
+position = Vector2(-157, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D2/des_tex2"]
+z_index = -1
+position = Vector2(44, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D2/des_tex2/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D2/des_tex2/des_tex2"]
+z_index = -1
+position = Vector2(0, -3)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D2/des_tex2/des_tex2/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex4" type="Sprite2D" parent="Desert/Node2D2/des_tex2"]
+z_index = -1
+position = Vector2(44, 127)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D2/des_tex2/des_tex4"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex5" type="Sprite2D" parent="Desert/Node2D2/des_tex2"]
+z_index = -2
+position = Vector2(-57, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="Node2D3" type="Node2D" parent="Desert"]
+position = Vector2(216, 0)
+
+[node name="des_tex3" type="Sprite2D" parent="Desert/Node2D3"]
+z_index = -1
+position = Vector2(373, -440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D3/des_tex3"]
+z_index = -1
+position = Vector2(-57, 0)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex3" type="Sprite2D" parent="Desert/Node2D3/des_tex3"]
+z_index = -1
+position = Vector2(100, 279)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D3/des_tex3/des_tex3"]
+z_index = -1
+position = Vector2(-157, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D3/des_tex3"]
+z_index = -1
+position = Vector2(44, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D3/des_tex3/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D3/des_tex3/des_tex2"]
+z_index = -1
+position = Vector2(0, -3)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D3/des_tex3/des_tex2/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex4" type="Sprite2D" parent="Desert/Node2D3/des_tex3"]
+z_index = -1
+position = Vector2(44, 127)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D3/des_tex3/des_tex4"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex5" type="Sprite2D" parent="Desert/Node2D3/des_tex3"]
+z_index = -2
+position = Vector2(-57, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex4" type="Sprite2D" parent="Desert/Node2D3"]
+z_index = -1
+position = Vector2(373, -1040)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D3/des_tex4"]
+z_index = -1
+position = Vector2(-57, 0)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex3" type="Sprite2D" parent="Desert/Node2D3/des_tex4"]
+z_index = -1
+position = Vector2(100, 279)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D3/des_tex4/des_tex3"]
+z_index = -1
+position = Vector2(-157, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D3/des_tex4"]
+z_index = -1
+position = Vector2(44, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D3/des_tex4/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D3/des_tex4/des_tex2"]
+z_index = -1
+position = Vector2(0, -3)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D3/des_tex4/des_tex2/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex4" type="Sprite2D" parent="Desert/Node2D3/des_tex4"]
+z_index = -1
+position = Vector2(44, 127)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D3/des_tex4/des_tex4"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex5" type="Sprite2D" parent="Desert/Node2D3/des_tex4"]
+z_index = -2
+position = Vector2(-57, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="Node2D4" type="Node2D" parent="Desert"]
+position = Vector2(-629, 0)
+
+[node name="des_tex3" type="Sprite2D" parent="Desert/Node2D4"]
+position = Vector2(373, -440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D4/des_tex3"]
+z_index = -1
+position = Vector2(-57, 0)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex3" type="Sprite2D" parent="Desert/Node2D4/des_tex3"]
+position = Vector2(100, 279)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D4/des_tex3/des_tex3"]
+z_index = -1
+position = Vector2(-157, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D4/des_tex3"]
+z_index = -1
+position = Vector2(44, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D4/des_tex3/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D4/des_tex3/des_tex2"]
+z_index = -1
+position = Vector2(0, -3)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D4/des_tex3/des_tex2/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex4" type="Sprite2D" parent="Desert/Node2D4/des_tex3"]
+position = Vector2(44, 127)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D4/des_tex3/des_tex4"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex5" type="Sprite2D" parent="Desert/Node2D4/des_tex3"]
+z_index = -2
+position = Vector2(-57, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex4" type="Sprite2D" parent="Desert/Node2D4"]
+z_index = -1
+position = Vector2(373, -1040)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D4/des_tex4"]
+z_index = -1
+position = Vector2(-57, 0)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex3" type="Sprite2D" parent="Desert/Node2D4/des_tex4"]
+z_index = -1
+position = Vector2(100, 279)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D4/des_tex4/des_tex3"]
+z_index = -1
+position = Vector2(-157, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D4/des_tex4"]
+z_index = -1
+position = Vector2(44, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D4/des_tex4/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D4/des_tex4/des_tex2"]
+z_index = -1
+position = Vector2(0, -3)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D4/des_tex4/des_tex2/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex4" type="Sprite2D" parent="Desert/Node2D4/des_tex4"]
+z_index = -1
+position = Vector2(44, 127)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D4/des_tex4/des_tex4"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex5" type="Sprite2D" parent="Desert/Node2D4/des_tex4"]
+z_index = -2
+position = Vector2(-57, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="Node2D5" type="Node2D" parent="Desert"]
+position = Vector2(-836, 0)
+
+[node name="des_tex3" type="Sprite2D" parent="Desert/Node2D5"]
+z_index = -1
+position = Vector2(373, -440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D5/des_tex3"]
+z_index = -1
+position = Vector2(-57, 0)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex3" type="Sprite2D" parent="Desert/Node2D5/des_tex3"]
+z_index = -1
+position = Vector2(100, 279)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D5/des_tex3/des_tex3"]
+z_index = -1
+position = Vector2(-157, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D5/des_tex3"]
+z_index = -1
+position = Vector2(44, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D5/des_tex3/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D5/des_tex3/des_tex2"]
+z_index = -1
+position = Vector2(0, -3)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D5/des_tex3/des_tex2/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex4" type="Sprite2D" parent="Desert/Node2D5/des_tex3"]
+z_index = -1
+position = Vector2(44, 127)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D5/des_tex3/des_tex4"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex5" type="Sprite2D" parent="Desert/Node2D5/des_tex3"]
+z_index = -2
+position = Vector2(-57, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex4" type="Sprite2D" parent="Desert/Node2D5"]
+z_index = -1
+position = Vector2(373, -1040)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D5/des_tex4"]
+z_index = -1
+position = Vector2(-57, 0)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex3" type="Sprite2D" parent="Desert/Node2D5/des_tex4"]
+z_index = -1
+position = Vector2(100, 279)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D5/des_tex4/des_tex3"]
+z_index = -1
+position = Vector2(-157, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D5/des_tex4"]
+z_index = -1
+position = Vector2(44, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D5/des_tex4/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D5/des_tex4/des_tex2"]
+z_index = -1
+position = Vector2(0, -3)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D5/des_tex4/des_tex2/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex4" type="Sprite2D" parent="Desert/Node2D5/des_tex4"]
+z_index = -1
+position = Vector2(44, 127)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D5/des_tex4/des_tex4"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex5" type="Sprite2D" parent="Desert/Node2D5/des_tex4"]
+z_index = -2
+position = Vector2(-57, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="Node2D6" type="Node2D" parent="Desert"]
+position = Vector2(377, 0)
+
+[node name="des_tex3" type="Sprite2D" parent="Desert/Node2D6"]
+z_index = -1
+position = Vector2(373, -440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D6/des_tex3"]
+z_index = -1
+position = Vector2(-57, 0)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex3" type="Sprite2D" parent="Desert/Node2D6/des_tex3"]
+z_index = -1
+position = Vector2(100, 279)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D6/des_tex3/des_tex3"]
+z_index = -1
+position = Vector2(-157, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D6/des_tex3"]
+z_index = -1
+position = Vector2(44, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D6/des_tex3/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D6/des_tex3/des_tex2"]
+z_index = -1
+position = Vector2(0, -3)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D6/des_tex3/des_tex2/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex4" type="Sprite2D" parent="Desert/Node2D6/des_tex3"]
+z_index = -1
+position = Vector2(44, 127)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D6/des_tex3/des_tex4"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex5" type="Sprite2D" parent="Desert/Node2D6/des_tex3"]
+z_index = -2
+position = Vector2(-57, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex4" type="Sprite2D" parent="Desert/Node2D6"]
+z_index = -1
+position = Vector2(373, -1040)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D6/des_tex4"]
+z_index = -1
+position = Vector2(-57, 0)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex3" type="Sprite2D" parent="Desert/Node2D6/des_tex4"]
+z_index = -1
+position = Vector2(100, 279)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D6/des_tex4/des_tex3"]
+z_index = -1
+position = Vector2(-157, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D6/des_tex4"]
+z_index = -1
+position = Vector2(44, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D6/des_tex4/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D6/des_tex4/des_tex2"]
+z_index = -1
+position = Vector2(0, -3)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D6/des_tex4/des_tex2/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex4" type="Sprite2D" parent="Desert/Node2D6/des_tex4"]
+z_index = -1
+position = Vector2(44, 127)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D6/des_tex4/des_tex4"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex5" type="Sprite2D" parent="Desert/Node2D6/des_tex4"]
+z_index = -2
+position = Vector2(-57, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="Node2D7" type="Node2D" parent="Desert"]
+position = Vector2(548, 0)
+
+[node name="des_tex3" type="Sprite2D" parent="Desert/Node2D7"]
+z_index = -1
+position = Vector2(373, -440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D7/des_tex3"]
+z_index = -1
+position = Vector2(-57, 0)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex3" type="Sprite2D" parent="Desert/Node2D7/des_tex3"]
+z_index = -1
+position = Vector2(100, 279)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D7/des_tex3/des_tex3"]
+z_index = -1
+position = Vector2(-157, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D7/des_tex3"]
+z_index = -1
+position = Vector2(44, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D7/des_tex3/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D7/des_tex3/des_tex2"]
+z_index = -1
+position = Vector2(0, -3)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D7/des_tex3/des_tex2/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex4" type="Sprite2D" parent="Desert/Node2D7/des_tex3"]
+z_index = -1
+position = Vector2(44, 127)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D7/des_tex3/des_tex4"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex5" type="Sprite2D" parent="Desert/Node2D7/des_tex3"]
+z_index = -2
+position = Vector2(-57, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex4" type="Sprite2D" parent="Desert/Node2D7"]
+z_index = -1
+position = Vector2(373, -1040)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D7/des_tex4"]
+z_index = -1
+position = Vector2(-57, 0)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex3" type="Sprite2D" parent="Desert/Node2D7/des_tex4"]
+z_index = -1
+position = Vector2(100, 279)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D7/des_tex4/des_tex3"]
+z_index = -1
+position = Vector2(-157, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D7/des_tex4"]
+z_index = -1
+position = Vector2(44, 440)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D7/des_tex4/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex2" type="Sprite2D" parent="Desert/Node2D7/des_tex4/des_tex2"]
+z_index = -1
+position = Vector2(0, -3)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D7/des_tex4/des_tex2/des_tex2"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex4" type="Sprite2D" parent="Desert/Node2D7/des_tex4"]
+z_index = -1
+position = Vector2(44, 127)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex" type="Sprite2D" parent="Desert/Node2D7/des_tex4/des_tex4"]
+z_index = -1
+position = Vector2(-101, -64)
+texture = ExtResource("3_esl6y")
+
+[node name="des_tex5" type="Sprite2D" parent="Desert/Node2D7/des_tex4"]
+z_index = -2
+position = Vector2(-57, 440)
+texture = ExtResource("3_esl6y")

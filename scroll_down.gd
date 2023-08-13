@@ -1,3 +1,4 @@
+class_name BackgroundElement
 extends Node2D
 
 var player
