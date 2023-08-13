@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jpg8wognie4d"
-path="res://.godot/imported/pirate_ship.png-ae58c4483cd54d1afdb028b6f10b719d.ctex"
+uid="uid://bndbhrsu6qeqy"
+path="res://.godot/imported/pirate_ship.png-33825a7ad77db4b6af84945c64e8bf42.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/pirate_ship.png"
-dest_files=["res://.godot/imported/pirate_ship.png-ae58c4483cd54d1afdb028b6f10b719d.ctex"]
+source_file="res://pirate_ship.png"
+dest_files=["res://.godot/imported/pirate_ship.png-33825a7ad77db4b6af84945c64e8bf42.ctex"]
 
 [params]
 

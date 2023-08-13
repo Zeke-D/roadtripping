@@ -8,6 +8,7 @@ size = Vector2(32, 64)
 
 [node name="npc_car_purple" type="CharacterBody2D" groups=["Civilian", "Enemy"]]
 script = ExtResource("1_uuawq")
+speed = 90
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_rxmrq")

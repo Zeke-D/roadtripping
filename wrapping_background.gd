@@ -12,3 +12,7 @@ func _physics_process(delta):
 	if (self.position.y > 600 + INITIAL_OFFSET):
 		self.position.y = INITIAL_OFFSET
 
+
+
+func _on_traffic_timer_timeout():
+	pass # Replace with function body.

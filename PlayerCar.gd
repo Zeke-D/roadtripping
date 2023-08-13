@@ -102,7 +102,13 @@ func take_damage(body):
 	
 	if body.is_in_group("Spinner"):
 		body.spinout((body.position - self.position).normalized())
-
+	if body.is_in_group("Projectile"):
+		state -= 1
+		body.queue_free()
+		body.get_parent().queue_free()
+	if body.is_in_group("Projectile_Single"):
+		state -= 1
+		body.queue_free()
+		body.get_parent().queue_free()
 	if state == CarState.DEAD:
 		self.spinout(-(body.position - self.position).normalized())
-		return
