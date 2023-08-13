@@ -1,14 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://bawbisp7r4ff6"]
+[gd_scene load_steps=4 format=3 uid="uid://bawbisp7r4ff6"]
 
 [ext_resource type="Texture2D" uid="uid://68akutqjhpfw" path="res://Assets/npccar.png" id="1_v3o14"]
+[ext_resource type="Script" path="res://npc_car.gd" id="1_vgpbt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uhxu8"]
 size = Vector2(32, 64)
 
 [node name="NpcCar" type="CharacterBody2D" groups=["Enemy"]]
+script = ExtResource("1_vgpbt")
+speed = 80
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_uhxu8")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="BlueCar" type="Sprite2D" parent="."]
 texture = ExtResource("1_v3o14")

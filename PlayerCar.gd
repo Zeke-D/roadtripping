@@ -48,10 +48,6 @@ func _physics_process(delta):
 	# check collisions
 	var should_move_horizontal : bool = true
 	var should_move_vertical   : bool = true
-	for body in hurtbox.get_overlapping_bodies():
-		if body.is_in_group("Enemy"):
-			should_move_horizontal = abs(body.position - self.position).x <= 32
-			should_move_vertical = 0 <= (body.position - self.position).y <= 64
 	
 	player_vertical_speed = 0
 	if should_move_vertical:

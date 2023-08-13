@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6rc0jh8evpoh"]
+
+[ext_resource type="Script" path="res://npc_car.gd" id="1_x28xl"]
+[ext_resource type="Texture2D" uid="uid://dsknuoybud3jf" path="res://Assets/tank.png" id="2_iqmwt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_llpga"]
+size = Vector2(32, 64)
+
+[node name="npc_tank" type="CharacterBody2D"]
+script = ExtResource("1_x28xl")
+speed = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_llpga")
+
+[node name="Tank" type="Sprite2D" parent="."]
+position = Vector2(2.38419e-07, 2)
+scale = Vector2(0.0737305, 0.0703125)
+texture = ExtResource("2_iqmwt")
