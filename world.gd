@@ -1,6 +1,5 @@
 extends Node2D
 
-var distance = 0
 var goal_distance = 10000
 var last_highway_sign = 0;
 
@@ -20,18 +19,18 @@ func _physics_process(delta):
 		
 	count += 1
 	# goal: every 1000m, give a highway sign
-	if (distance - last_highway_sign > 1000):
+	if (global.distance - last_highway_sign > 1000):
 		# make a sign
 		var new_sign = highway_sign.instantiate()
 		new_sign.position = Vector2(100, -500);
 		new_sign.scale = Vector2(.5, .5);
-		new_sign.mile_text = str(int(goal_distance - distance) / 1000) + " mi."
+		new_sign.mile_text = str(int(goal_distance - global.distance) / 1000) + " mi."
 		get_tree().current_scene.add_child(new_sign)
 		new_sign.init()
-		last_highway_sign = distance
+		last_highway_sign = global.distance
 		
 	
-	if (distance >= goal_distance):
+	if (global.distance >= goal_distance):
 		print('win')
 
 func start_game_over():
