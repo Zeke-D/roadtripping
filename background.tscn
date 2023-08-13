@@ -25,7 +25,6 @@ position = Vector2(482, 0)
 [node name="Img0104" type="Sprite2D" parent="Grass/Node2D2"]
 z_index = -1
 position = Vector2(-488, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("2_kugdb")
 
 [node name="Img0101" type="Sprite2D" parent="Grass/Node2D2/Img0104"]
@@ -36,7 +35,6 @@ texture = ExtResource("2_kugdb")
 [node name="Img0102" type="Sprite2D" parent="Grass/Node2D2"]
 z_index = -1
 position = Vector2(-488, -640)
-scale = Vector2(1, 1)
 texture = ExtResource("2_kugdb")
 
 [node name="Img0101" type="Sprite2D" parent="Grass/Node2D2/Img0102"]
@@ -50,7 +48,6 @@ position = Vector2(794, 0)
 [node name="Img0104" type="Sprite2D" parent="Grass/Node2D3"]
 z_index = -1
 position = Vector2(-488, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("2_kugdb")
 
 [node name="Img0101" type="Sprite2D" parent="Grass/Node2D3/Img0104"]
@@ -61,7 +58,6 @@ texture = ExtResource("2_kugdb")
 [node name="Img0102" type="Sprite2D" parent="Grass/Node2D3"]
 z_index = -1
 position = Vector2(-488, -640)
-scale = Vector2(1, 1)
 texture = ExtResource("2_kugdb")
 
 [node name="Img0101" type="Sprite2D" parent="Grass/Node2D3/Img0102"]
@@ -75,7 +71,6 @@ position = Vector2(1103, 0)
 [node name="Img0104" type="Sprite2D" parent="Grass/Node2D4"]
 z_index = -1
 position = Vector2(-488, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("2_kugdb")
 
 [node name="Img0101" type="Sprite2D" parent="Grass/Node2D4/Img0104"]
@@ -86,7 +81,6 @@ texture = ExtResource("2_kugdb")
 [node name="Img0102" type="Sprite2D" parent="Grass/Node2D4"]
 z_index = -1
 position = Vector2(-488, -640)
-scale = Vector2(1, 1)
 texture = ExtResource("2_kugdb")
 
 [node name="Img0101" type="Sprite2D" parent="Grass/Node2D4/Img0102"]
@@ -100,7 +94,6 @@ position = Vector2(1423, 0)
 [node name="Img0104" type="Sprite2D" parent="Grass/Node2D5"]
 z_index = -1
 position = Vector2(-488, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("2_kugdb")
 
 [node name="Img0101" type="Sprite2D" parent="Grass/Node2D5/Img0104"]
@@ -111,7 +104,6 @@ texture = ExtResource("2_kugdb")
 [node name="Img0102" type="Sprite2D" parent="Grass/Node2D5"]
 z_index = -1
 position = Vector2(-488, -640)
-scale = Vector2(1, 1)
 texture = ExtResource("2_kugdb")
 
 [node name="Img0101" type="Sprite2D" parent="Grass/Node2D5/Img0102"]
@@ -125,7 +117,6 @@ position = Vector2(-968, 0)
 [node name="Img0104" type="Sprite2D" parent="Grass/Node2D6"]
 z_index = -1
 position = Vector2(-488, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("2_kugdb")
 
 [node name="Img0101" type="Sprite2D" parent="Grass/Node2D6/Img0104"]
@@ -136,7 +127,6 @@ texture = ExtResource("2_kugdb")
 [node name="Img0102" type="Sprite2D" parent="Grass/Node2D6"]
 z_index = -1
 position = Vector2(-488, -640)
-scale = Vector2(1, 1)
 texture = ExtResource("2_kugdb")
 
 [node name="Img0101" type="Sprite2D" parent="Grass/Node2D6/Img0102"]
@@ -150,7 +140,6 @@ position = Vector2(-656, 0)
 [node name="Img0104" type="Sprite2D" parent="Grass/Node2D7"]
 z_index = -1
 position = Vector2(-488, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("2_kugdb")
 
 [node name="Img0101" type="Sprite2D" parent="Grass/Node2D7/Img0104"]
@@ -161,7 +150,6 @@ texture = ExtResource("2_kugdb")
 [node name="Img0102" type="Sprite2D" parent="Grass/Node2D7"]
 z_index = -1
 position = Vector2(-488, -640)
-scale = Vector2(1, 1)
 texture = ExtResource("2_kugdb")
 
 [node name="Img0101" type="Sprite2D" parent="Grass/Node2D7/Img0102"]
@@ -175,7 +163,6 @@ position = Vector2(-347, 0)
 [node name="Img0104" type="Sprite2D" parent="Grass/Node2D8"]
 z_index = -1
 position = Vector2(-488, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("2_kugdb")
 
 [node name="Img0101" type="Sprite2D" parent="Grass/Node2D8/Img0104"]
@@ -186,7 +173,6 @@ texture = ExtResource("2_kugdb")
 [node name="Img0102" type="Sprite2D" parent="Grass/Node2D8"]
 z_index = -1
 position = Vector2(-488, -640)
-scale = Vector2(1, 1)
 texture = ExtResource("2_kugdb")
 
 [node name="Img0101" type="Sprite2D" parent="Grass/Node2D8/Img0102"]
@@ -200,7 +186,6 @@ position = Vector2(-26.9999, 0)
 [node name="Img0104" type="Sprite2D" parent="Grass/Node2D9"]
 z_index = -1
 position = Vector2(-488, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("2_kugdb")
 
 [node name="Img0101" type="Sprite2D" parent="Grass/Node2D9/Img0104"]
@@ -211,7 +196,6 @@ texture = ExtResource("2_kugdb")
 [node name="Img0102" type="Sprite2D" parent="Grass/Node2D9"]
 z_index = -1
 position = Vector2(-488, -640)
-scale = Vector2(1, 1)
 texture = ExtResource("2_kugdb")
 
 [node name="Img0101" type="Sprite2D" parent="Grass/Node2D9/Img0102"]
