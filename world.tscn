@@ -12,6 +12,8 @@
 [ext_resource type="Script" path="res://traffic_timer.gd" id="8_5lghh"]
 [ext_resource type="PackedScene" path="res://npcs/npc_car_cop.tscn" id="8_757vp"]
 [ext_resource type="PackedScene" path="res://npcs/alien_ship.tscn" id="8_wskmv"]
+[ext_resource type="Script" path="res://timer.gd" id="6_ehp6s"]
+[ext_resource type="PackedScene" uid="uid://bp6v3g2sv3byt" path="res://npcs/alien_ship.tscn" id="8_wskmv"]
 [ext_resource type="Script" path="res://npcs/alien_ship.gd" id="9_tt732"]
 [ext_resource type="AudioStream" uid="uid://dtw5n6etea3gd" path="res://Sounds/police-siren-99029.mp3" id="10_xu3sg"]
 
@@ -88,7 +90,9 @@ position = Vector2(19, -21)
 
 [node name="CopCar" parent="CanvasGroup/Obstacles" instance=ExtResource("8_757vp")]
 position = Vector2(-56, 696)
-
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+script = ExtResource("6_ehp6s")
 [node name="Spawner" type="Node2D" parent="."]
 script = ExtResource("1_3dc4a")
 

@@ -1,11 +1,10 @@
-extends Node
+class_name Level
 
+var bg_name: String
+var distance: float
+var npc_dict: Dictionary
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _init(distance, bg, npcs):
+	self.distance = distance
+	self.bg_name  = bg
+	self.npc_dict = npcs
