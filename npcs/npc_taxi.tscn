@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mwqo"]
 size = Vector2(32, 64)
 
-[node name="npc_taxi" type="CharacterBody2D" groups=["Enemy"]]
+[node name="npc_taxi" type="CharacterBody2D" groups=["Civilian", "Enemy"]]
 script = ExtResource("1_6x4n6")
 speed = 110
 

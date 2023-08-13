@@ -24,6 +24,8 @@ func _ready():
 	player = get_tree().current_scene.find_child('Car')
 	escape_tween = get_tree().create_tween()
 	escape_tween.stop()
+	global.police_chase = true
+	get_tree().current_scene.find_child("Sounds").find_child("Police_sirens").play()
 
 func _physics_process(delta):
 	position = get_next_position(delta)
@@ -47,7 +49,9 @@ func check_offscreen():
 func escaped():
 	if(!initial_chase):
 		print("escaped police.")
+		global.police_chase = false
 		self.queue_free()
+		get_tree().current_scene.find_child("Sounds").find_child("Police_sirens").stop()
 
 func move_and_rotate(target_position, target_rotation, duration):
 	var tween = get_tree().create_tween()
@@ -67,3 +71,4 @@ func spinout(direction):
 func _on_hurtbox_body_entered(body):
 	if body.is_in_group("Enemy"):
 		body.spinout((body.position - self.position).normalized())
+		get_tree().current_scene.find_child("Sounds").find_child("Car_hit").play()

@@ -1,13 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://c4a0t2vn7bw41"]
+[gd_scene load_steps=14 format=3 uid="uid://c4a0t2vn7bw41"]
 
 [ext_resource type="PackedScene" uid="uid://dn2511q50ob5p" path="res://player_car.tscn" id="1_0pryi"]
 [ext_resource type="Script" path="res://oncoming_traffic.gd" id="1_3dc4a"]
 [ext_resource type="Texture2D" uid="uid://b0awv4geu16qs" path="res://Assets/base_road.png" id="1_tlry5"]
 [ext_resource type="Script" path="res://world.gd" id="1_vilm6"]
 [ext_resource type="PackedScene" uid="uid://jc02a36m21ag" path="res://background.tscn" id="3_5jjkl"]
+[ext_resource type="AudioStream" uid="uid://dtnlp6fwcia4d" path="res://Sounds/car-idling-22638.mp3" id="4_rgqk3"]
+[ext_resource type="AudioStream" uid="uid://b6ywawbenqvfc" path="res://Sounds/RT_Death_crash.mp3" id="5_fooi5"]
 [ext_resource type="Script" path="res://wrapping_background.gd" id="5_gykqv"]
+[ext_resource type="AudioStream" uid="uid://b1k377ojstc7f" path="res://Sounds/RT_Car_Crash2.mp3" id="6_74mx0"]
 [ext_resource type="Script" path="res://timer.gd" id="6_ehp6s"]
-[ext_resource type="PackedScene" uid="uid://bxxus3ymc2n3p" path="res://npcs/npc_car_cop.tscn" id="8_757vp"]
+[ext_resource type="AudioStream" uid="uid://dtw5n6etea3gd" path="res://Sounds/police-siren-99029.mp3" id="10_xu3sg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rssb8"]
 texture = ExtResource("1_tlry5")
@@ -80,14 +83,26 @@ script = ExtResource("5_gykqv")
 z_index = 1
 position = Vector2(19, -21)
 
-[node name="CopCar" parent="CanvasGroup/Obstacles" instance=ExtResource("8_757vp")]
-position = Vector2(-56, 696)
-
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 script = ExtResource("6_ehp6s")
 
 [node name="Spawner" type="Node2D" parent="."]
 script = ExtResource("1_3dc4a")
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="Idle_sound" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("4_rgqk3")
+
+[node name="Police_sirens" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("10_xu3sg")
+
+[node name="Car_hit" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("6_74mx0")
+volume_db = -0.57
+
+[node name="Death_sound" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("5_fooi5")
 
 [connection signal="timeout" from="Timer" to="Spawner" method="_on_timer_timeout"]

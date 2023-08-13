@@ -6,7 +6,7 @@ var world
 var CAR_WIDTH : float = 32;
 var ROAD_WIDTH : float = 49 * 4 - CAR_WIDTH;
 var elapsed = 0.0
-var spin_duration = 2
+var spin_duration = 1.5
 var state = CarState.FULL_HP
 
 enum CarState {
@@ -27,7 +27,7 @@ var speed_mult_map : Array[float] = [];
 var hurtbox;
 
 func _ready():
-	
+	get_tree().current_scene.find_child("Sounds").find_child("Idle_sound").play()
 	global.distance = 0
 	
 	#init speed_mult_map
@@ -81,16 +81,21 @@ func test():
 	get_tree().current_scene.start_game_over()
 
 func spinout(direction):
+	get_tree().current_scene.find_child("Sounds").find_child("Idle_sound").stop()
+	get_tree().current_scene.find_child("Sounds").find_child("Death_sound").play()
 	move_and_rotate(direction * Vector2(1200, 600) * .25, 
 		self.rotation + TAU * 2.64, spin_duration)
 
 func _on_hurtbox_body_entered(body):
 	if body.is_in_group("Enemy") and state != CarState.DEAD:
 		print("HIT")
+		get_tree().current_scene.find_child("Sounds").find_child("Car_hit").play()
 		state -= 1
 		body.spinout((body.position - self.position).normalized())
 		if state == CarState.DEAD:
 			self.spinout(-(body.position - self.position).normalized())
+		elif body.is_in_group("Civilian") and !global.police_chase:
+			get_tree().current_scene.find_child("Spawner").spawn_cop(self.position + Vector2(0, 400))
 			
 	if body.is_in_group("Police") and state != CarState.DEAD:
 		state = 0
