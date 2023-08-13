@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://wrapping_background.gd" id="5_gykqv"]
 [ext_resource type="AudioStream" uid="uid://b1k377ojstc7f" path="res://Sounds/RT_Car_Crash2.mp3" id="6_74mx0"]
 [ext_resource type="Script" path="res://timer.gd" id="6_ehp6s"]
-[ext_resource type="PackedScene" uid="uid://df71bmc3v0pe8" path="res://npcs/alien_ship.tscn" id="8_wskmv"]
+[ext_resource type="PackedScene" uid="uid://bu0npakla1611" path="res://npcs/alien_ship.tscn" id="8_wskmv"]
 [ext_resource type="Script" path="res://npcs/alien_ship.gd" id="9_tt732"]
 [ext_resource type="AudioStream" uid="uid://dtw5n6etea3gd" path="res://Sounds/police-siren-99029.mp3" id="10_xu3sg"]
 

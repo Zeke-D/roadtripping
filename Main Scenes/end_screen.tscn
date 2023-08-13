@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://tfvpp1pcykxw"]
 
-[ext_resource type="Script" path="res://end_screen.gd" id="1_bm2s6"]
-[ext_resource type="Script" path="res://EndScreenScore.gd" id="1_pf820"]
+[ext_resource type="Script" path="res://Main Scenes/end_screen.gd" id="1_u4ru3"]
+[ext_resource type="Script" path="res://EndScreenScore.gd" id="2_5srxe"]
 
 [node name="EndScreen" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_bm2s6")
+script = ExtResource("1_u4ru3")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 custom_minimum_size = Vector2(150, 0)
@@ -28,7 +28,7 @@ offset_left = 565.0
 offset_top = 202.0
 offset_right = 734.0
 offset_bottom = 242.0
-script = ExtResource("1_pf820")
+script = ExtResource("2_5srxe")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://df71bmc3v0pe8"]
+[gd_scene load_steps=8 format=3 uid="uid://bu0npakla1611"]
 
 [ext_resource type="Texture2D" uid="uid://dj7us4pu0bes8" path="res://Assets/SpaceShooterAssetPack_Ships.png" id="1_hx41h"]
 [ext_resource type="Texture2D" uid="uid://1ksd1emano5d" path="res://Assets/SpaceShooterAssetPack_Projectiles.png" id="2_duijc"]
@@ -9,6 +9,21 @@ size = Vector2(6.5, 9)
 [sub_resource type="AtlasTexture" id="AtlasTexture_v8qtn"]
 atlas = ExtResource("1_hx41h")
 region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="Animation" id="Animation_3c2lr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Zap-hitbox/CollisionShape2D:shape:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6.5, 9)]
+}
 
 [sub_resource type="Animation" id="Animation_lweiq"]
 resource_name = "Zap"
@@ -84,21 +99,6 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(6.5, 9), Vector2(6.5, 9), Vector2(27, 9), Vector2(27, 9), Vector2(5.5, 9)]
-}
-
-[sub_resource type="Animation" id="Animation_3c2lr"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Zap-hitbox/CollisionShape2D:shape:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(6.5, 9)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_01a7u"]

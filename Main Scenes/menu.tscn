@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://q1rmedw22cdn"]
 
-[ext_resource type="Script" path="res://start_button.gd" id="1_ruhf1"]
+[ext_resource type="Script" path="res://Main Scenes/start_button.gd" id="1_ewvos"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -21,7 +21,7 @@ alignment = 1
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "START"
-script = ExtResource("1_ruhf1")
+script = ExtResource("1_ewvos")
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
