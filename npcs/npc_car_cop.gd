@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name NpcCopCar
 var player
 @export var speed: int = 2000
-const NPC_BASE_MOVEMENT_SPEED: float = 400
+const NPC_BASE_MOVEMENT_SPEED: float = 500
 const NPC_INITIAL_CHASE_SPEED: float = 100000
 const COP_HORIZONTAL_SPEED: float = 5
 # spin globals
@@ -33,7 +33,6 @@ func _physics_process(delta):
 
 func check_offscreen():
 	if(self.position.y > player.position.y + 400 and offscreen == false):
-		print('escape started')
 		escape_tween.tween_callback(escaped).set_delay(2)
 		escape_tween.play()
 		offscreen = true
@@ -43,12 +42,10 @@ func check_offscreen():
 			speed = NPC_BASE_MOVEMENT_SPEED
 			
 		offscreen = false
-		print('escape stopped')
 		escape_tween.stop()
 
 func escaped():
 	if(!initial_chase):
-		print("escaped police.")
 		global.police_chase = false
 		self.queue_free()
 		get_tree().current_scene.find_child("Sounds").find_child("Police_sirens").stop()
