@@ -35,12 +35,10 @@ func create_obstacle(pos, obstacle):
 	var npcCar = obstacle.instantiate()
 	npcCar.position = pos
 	get_parent().add_child(npcCar)
-	print(pos)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _on_timer_timeout():
-	print('timer done')
 	var lane_to_spawn = randi() % 4
 	var rand_obstacle = randi() % 100
 	create_obstacle(get_lane(lane_to_spawn), get_obstacle(rand_obstacle))

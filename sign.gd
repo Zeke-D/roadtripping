@@ -12,7 +12,5 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	# delete when offscreen
-	print(self.position.y)
 	if (self.position.y > 200):
-		print("Gonezo")
 		self.free()

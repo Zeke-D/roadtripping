@@ -91,3 +91,7 @@ func _on_hurtbox_body_entered(body):
 		body.spinout((body.position - self.position).normalized())
 		if state == CarState.DEAD:
 			self.spinout(-(body.position - self.position).normalized())
+			
+	if body.is_in_group("Police") and state != CarState.DEAD:
+		state = 0
+		self.spinout(-(body.position - self.position).normalized())

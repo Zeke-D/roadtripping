@@ -6,7 +6,6 @@ const NPC_BASE_MOVEMENT_SPEED: float = 80
 
 # spin globals
 var did_spin = false
-var time_elapsed = 0.0
 var spin_duration = 2.
 
 func get_next_position(delta):
@@ -15,20 +14,13 @@ func get_next_position(delta):
 		
 	return self.position + Vector2(
 		0, 
-		player.player_vertical_speed - NPC_BASE_MOVEMENT_SPEED * delta
+		player.player_vertical_speed - speed * delta
 	)
 
 func _ready():
 	player = get_tree().current_scene.find_child('Car')
 
-
-func spin_callback(delta):
-	time_elapsed += delta
-	if (time_elapsed > spin_duration):
-		time_elapsed = 0
-
 func _physics_process(delta):
-	spin_callback(delta)
 	position = get_next_position(delta)
 
 func move_and_rotate(target_position, target_rotation, duration):
@@ -41,7 +33,7 @@ func move_and_rotate(target_position, target_rotation, duration):
 func spinout(direction):
 	print("SPIN")
 	did_spin = true
-	
+	self.find_child("CollisionShape2D").set_deferred("disabled",true)
 	# deactivate collider
 	move_and_rotate(direction * Vector2(1200, 600) * .5, self.rotation + TAU * 4, spin_duration)
 	

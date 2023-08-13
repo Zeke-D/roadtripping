@@ -36,8 +36,8 @@ func _physics_process(delta):
 func start_game_over():
 	game_over = true
 	var tween = get_tree().create_tween()
-	tween.tween_callback(test).set_delay(2)
+	tween.tween_callback(finish_game_over).set_delay(2)
 
-func test():
+func finish_game_over():
 	get_tree().change_scene_to_file("res://end_screen.tscn")
 	print("yo frfr")
