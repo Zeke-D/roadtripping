@@ -21,17 +21,13 @@ var obstacle_dict: Dictionary = {
 	npc_boat: 15
 }
 
-var obstacle_dict_2: Dictionary = {
-	npc_boat: 100
-}
-
 func get_lane(lane_index: int):
 	return LANE_ONE + lane_index * Vector2(WIDTH, 0)
 	
 func get_obstacle(index):
 	var acc = 0
-	for obstacle in obstacle_dict_2:
-		acc = acc + obstacle_dict_2[obstacle]
+	for obstacle in obstacle_dict:
+		acc = acc + obstacle_dict[obstacle]
 		if index <= acc:
 			return obstacle
 
