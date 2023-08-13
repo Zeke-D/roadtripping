@@ -83,11 +83,11 @@ position = Vector2(19, -21)
 [node name="CopCar" parent="CanvasGroup/Obstacles" instance=ExtResource("8_757vp")]
 position = Vector2(-56, 696)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="TrafficTimer" type="Timer" parent="."]
 autostart = true
-script = ExtResource("6_ehp6s")
+script = ExtResource("6_bhynb")
 
 [node name="Spawner" type="Node2D" parent="."]
 script = ExtResource("1_3dc4a")
 
-[connection signal="timeout" from="Timer" to="Spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="TrafficTimer" to="Spawner" method="_on_timer_timeout"]

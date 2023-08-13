@@ -13,7 +13,7 @@ var npc_taxi: PackedScene = load("res://npcs/npc_taxi.tscn")
 
 var LANE_ONE: Vector2 = Vector2(LANE_ONE_X, -500)
 
-var obstacle_dict: Dictionary = {
+var obstacle_dict_2: Dictionary = {
 	npc_car_blue: 35,
 	npc_car_purple: 30,
 	npc_taxi: 20,
@@ -26,8 +26,8 @@ func get_lane(lane_index: int):
 	
 func get_obstacle(index):
 	var acc = 0
-	for obstacle in obstacle_dict:
-		acc = acc + obstacle_dict[obstacle]
+	for obstacle in obstacle_dict_2:
+		acc = acc + obstacle_dict_2[obstacle]
 		if index <= acc:
 			return obstacle
 

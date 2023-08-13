@@ -36,4 +36,3 @@ func spinout(direction):
 	self.find_child("CollisionShape2D").set_deferred("disabled",true)
 	# deactivate collider
 	move_and_rotate(direction * Vector2(1200, 600) * .5, self.rotation + TAU * 4, spin_duration)
-	
