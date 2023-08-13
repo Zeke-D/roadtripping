@@ -1,24 +1,21 @@
-[gd_scene load_steps=18 format=3 uid="uid://c4a0t2vn7bw41"]
+[gd_scene load_steps=16 format=3 uid="uid://cnjjef6u4owda"]
 
-[ext_resource type="PackedScene" uid="uid://dn2511q50ob5p" path="res://player_car.tscn" id="1_0pryi"]
-[ext_resource type="Script" path="res://oncoming_traffic.gd" id="1_3dc4a"]
-[ext_resource type="Texture2D" uid="uid://b0awv4geu16qs" path="res://Assets/base_road.png" id="1_tlry5"]
-[ext_resource type="Script" path="res://world.gd" id="1_vilm6"]
-[ext_resource type="PackedScene" uid="uid://jc02a36m21ag" path="res://background.tscn" id="3_5jjkl"]
-[ext_resource type="AudioStream" uid="uid://dtnlp6fwcia4d" path="res://Sounds/car-idling-22638.mp3" id="4_rgqk3"]
-[ext_resource type="Texture2D" uid="uid://n7k6py6axu6c" path="res://Assets/hp_wheel_empty.png" id="5_1nt6g"]
-[ext_resource type="AudioStream" uid="uid://b6ywawbenqvfc" path="res://Sounds/RT_Death_crash.mp3" id="5_fooi5"]
-[ext_resource type="Script" path="res://wrapping_background.gd" id="5_gykqv"]
-[ext_resource type="Script" path="res://Main Scenes/hp_wheel_1.gd" id="5_rkc85"]
-[ext_resource type="AudioStream" uid="uid://b1k377ojstc7f" path="res://Sounds/RT_Car_Crash2.mp3" id="6_74mx0"]
-[ext_resource type="Script" path="res://traffic_timer.gd" id="8_5lghh"]
-[ext_resource type="PackedScene" uid="uid://bu0npakla1611" path="res://npcs/alien_ship.tscn" id="8_wskmv"]
-[ext_resource type="PackedScene" uid="uid://b06xxsj1fn3d3" path="res://npcs/npc_car_cop.tscn" id="8_757vp"]
-[ext_resource type="AudioStream" uid="uid://dtw5n6etea3gd" path="res://Sounds/police-siren-99029.mp3" id="10_xu3sg"]
-[ext_resource type="Texture2D" uid="uid://bft0tibwycvtv" path="res://Assets/hp_wheel.png" id="14_1hugb"]
+[ext_resource type="Script" path="res://world.gd" id="1_gcwyr"]
+[ext_resource type="Texture2D" uid="uid://b0awv4geu16qs" path="res://Assets/base_road.png" id="2_byc20"]
+[ext_resource type="PackedScene" uid="uid://dn2511q50ob5p" path="res://player_car.tscn" id="3_4fcds"]
+[ext_resource type="PackedScene" uid="uid://jc02a36m21ag" path="res://background.tscn" id="4_1erbw"]
+[ext_resource type="Script" path="res://wrapping_background.gd" id="5_y2dox"]
+[ext_resource type="PackedScene" uid="uid://b06xxsj1fn3d3" path="res://npcs/npc_car_cop.tscn" id="6_snt02"]
+[ext_resource type="Script" path="res://timer.gd" id="7_owelm"]
+[ext_resource type="Script" path="res://oncoming_traffic.gd" id="8_uwo2w"]
+[ext_resource type="Script" path="res://traffic_timer.gd" id="9_6k4kc"]
+[ext_resource type="AudioStream" uid="uid://dtnlp6fwcia4d" path="res://Sounds/car-idling-22638.mp3" id="10_x14f4"]
+[ext_resource type="AudioStream" uid="uid://dtw5n6etea3gd" path="res://Sounds/police-siren-99029.mp3" id="11_6rfks"]
+[ext_resource type="AudioStream" uid="uid://b1k377ojstc7f" path="res://Sounds/RT_Car_Crash2.mp3" id="12_epr3h"]
+[ext_resource type="AudioStream" uid="uid://b6ywawbenqvfc" path="res://Sounds/RT_Death_crash.mp3" id="13_hhara"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rssb8"]
-texture = ExtResource("1_tlry5")
+texture = ExtResource("2_byc20")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -57,7 +54,7 @@ sources/0 = SubResource("TileSetAtlasSource_rssb8")
 
 [node name="World" type="Node2D"]
 z_index = 1
-script = ExtResource("1_vilm6")
+script = ExtResource("1_gcwyr")
 
 [node name="TileMap" type="TileMap" parent="."]
 visible = false
@@ -68,7 +65,7 @@ layer_0/tile_data = PackedInt32Array(-65537, 196608, 0, -1, 196608, 1, -131072, 
 [node name="CanvasGroup" type="CanvasGroup" parent="."]
 y_sort_enabled = true
 
-[node name="Car" parent="CanvasGroup" instance=ExtResource("1_0pryi")]
+[node name="Car" parent="CanvasGroup" instance=ExtResource("3_4fcds")]
 z_index = 1
 
 [node name="Camera2D" type="Camera2D" parent="CanvasGroup/Car"]
@@ -80,75 +77,40 @@ offset_right = -216.0
 offset_bottom = -66.0
 text = "test"
 
-[node name="hp_wheel_1" type="Sprite2D" parent="CanvasGroup/Car/Camera2D" groups=["hp1"]]
-position = Vector2(442, 254)
-scale = Vector2(0.0227051, 0.0227051)
-texture = ExtResource("14_1hugb")
-script = ExtResource("5_rkc85")
-
-[node name="hp_empty_1" type="Sprite2D" parent="CanvasGroup/Car/Camera2D"]
-z_index = -1
-position = Vector2(442, 254)
-scale = Vector2(0.023, 0.023)
-texture = ExtResource("5_1nt6g")
-
-[node name="hp_wheel_2" type="Sprite2D" parent="CanvasGroup/Car/Camera2D" groups=["hp2"]]
-position = Vector2(501.552, 254.552)
-scale = Vector2(0.0227051, 0.0227051)
-texture = ExtResource("14_1hugb")
-script = ExtResource("5_rkc85")
-
-[node name="hp_empty_2" type="Sprite2D" parent="CanvasGroup/Car/Camera2D"]
-z_index = -1
-position = Vector2(501.552, 254.552)
-scale = Vector2(0.023, 0.023)
-texture = ExtResource("5_1nt6g")
-
-[node name="hp_wheel_3" type="Sprite2D" parent="CanvasGroup/Car/Camera2D" groups=["hp3"]]
-position = Vector2(559.552, 254.552)
-scale = Vector2(0.0227051, 0.0227051)
-texture = ExtResource("14_1hugb")
-script = ExtResource("5_rkc85")
-
-[node name="hp_empty_3" type="Sprite2D" parent="CanvasGroup/Car/Camera2D"]
-z_index = -1
-position = Vector2(559.552, 254.552)
-scale = Vector2(0.023, 0.023)
-texture = ExtResource("5_1nt6g")
-
-[node name="Background" parent="CanvasGroup" instance=ExtResource("3_5jjkl")]
+[node name="Background" parent="CanvasGroup" instance=ExtResource("4_1erbw")]
 position = Vector2(0, -300)
-script = ExtResource("5_gykqv")
+script = ExtResource("5_y2dox")
 
 [node name="Obstacles" type="CanvasGroup" parent="CanvasGroup"]
 z_index = 1
 position = Vector2(19, -21)
 
+[node name="CopCar" parent="CanvasGroup/Obstacles" instance=ExtResource("6_snt02")]
+position = Vector2(-56, 696)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+script = ExtResource("7_owelm")
+
 [node name="Spawner" type="Node2D" parent="."]
-script = ExtResource("1_3dc4a")
+script = ExtResource("8_uwo2w")
 
 [node name="TrafficTimer" type="Timer" parent="."]
-script = ExtResource("8_5lghh")
+script = ExtResource("9_6k4kc")
 
 [node name="Sounds" type="Node" parent="."]
 
 [node name="Idle_sound" type="AudioStreamPlayer2D" parent="Sounds"]
-stream = ExtResource("4_rgqk3")
+stream = ExtResource("10_x14f4")
 
 [node name="Police_sirens" type="AudioStreamPlayer2D" parent="Sounds"]
-stream = ExtResource("10_xu3sg")
+stream = ExtResource("11_6rfks")
 
 [node name="Car_hit" type="AudioStreamPlayer2D" parent="Sounds"]
-stream = ExtResource("6_74mx0")
+stream = ExtResource("12_epr3h")
 volume_db = -0.57
 
 [node name="Death_sound" type="AudioStreamPlayer2D" parent="Sounds"]
-stream = ExtResource("5_fooi5")
-
-[node name="Alien_Spawner" type="Node" parent="."]
-
-[node name="alien_ship" parent="Alien_Spawner" instance=ExtResource("8_wskmv")]
-z_index = 1
-position = Vector2(134, -363)
+stream = ExtResource("13_hhara")
 
 [connection signal="timeout" from="TrafficTimer" to="Spawner" method="_on_traffic_timer_timeout"]

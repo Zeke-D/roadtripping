@@ -7,6 +7,8 @@ var CAR_WIDTH : float = 32;
 var ROAD_WIDTH : float = 49 * 4 - CAR_WIDTH;
 var elapsed = 0.0
 var spin_duration = 1.5
+var state = CarState.FULL_HP
+var speed_mult = 1.
 
 enum CarState {
 	DEAD,
@@ -32,7 +34,7 @@ func _ready():
 	hurtbox = find_child("Hurtbox")
 
 func move(delta):
-	var speed_mult = 1
+	self.speed_mult = speed_mult_map[World_Scroll_Speed.MEDIUM]
 	
 	var new_x_pos = position.x
 	
@@ -41,16 +43,16 @@ func move(delta):
 	if (Input.is_action_pressed("right")):
 		new_x_pos += BASE_PLAYER_SPEED.x * delta
 	if (Input.is_action_pressed("up")):
-		speed_mult = global.boost_multiplier
+		self.speed_mult = speed_mult_map[World_Scroll_Speed.FAST]
 	if (Input.is_action_pressed("down")):
-		speed_mult = global.break_multiplier
+		self.speed_mult = speed_mult_map[World_Scroll_Speed.SLOW]
 	
 	new_x_pos = clamp(new_x_pos, ROAD_WIDTH / -2, ROAD_WIDTH / 2);
 	
 	# will come back to u
 	# self.set_rotation(1/4 * PI * sin(elapsed))
 	#elapsed += delta
-	self.player_vertical_speed = BASE_PLAYER_SPEED.y * delta * speed_mult
+	self.player_vertical_speed = BASE_PLAYER_SPEED.y * delta * self.speed_mult
 	global.distance += self.player_vertical_speed
 	self.find_child('ScoreText').text = str(int(global.distance / 1000))
 	self.position.x = new_x_pos

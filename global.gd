@@ -24,7 +24,9 @@ var level_one_enemies: Dictionary = {
 	npc_taxi: 20,
 }
 var level_two_enemies: Dictionary = {
-	npc_cop: 100,
+	npc_car_blue: 40,
+	npc_car_purple: 40,
+	npc_taxi: 20,
 }
 
 var level_three_enemies : Dictionary = {
@@ -51,10 +53,10 @@ var level_five_enemies : Dictionary = {
 	alien: 20,
 }
 
-var LEVEL_ONE   = Level.new( 5000,  "Grass", level_one_enemies)
-var LEVEL_TWO   = Level.new( 5000,  "Grass", level_two_enemies)
-var LEVEL_THREE = Level.new(10000, "Desert", level_three_enemies)
-var LEVEL_FOUR  = Level.new(10000, "Desert", level_four_enemies)
-var LEVEL_FIVE  = Level.new(10000, "Desert", level_five_enemies)
+var LEVEL_ONE   = Level.new( 5000,  "Grass", level_one_enemies,   1)
+var LEVEL_TWO   = Level.new( 5000,  "Grass", level_two_enemies,   .5)
+var LEVEL_THREE = Level.new(10000, "Desert", level_three_enemies, .5)
+var LEVEL_FOUR  = Level.new(10000, "Desert", level_four_enemies,  .5)
+var LEVEL_FIVE  = Level.new(10000, "Desert", level_five_enemies,  .25)
 
 var levels = [LEVEL_ONE, LEVEL_TWO, LEVEL_THREE, LEVEL_FOUR, LEVEL_FIVE]

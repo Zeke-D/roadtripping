@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxxus3ymc2n3p"]
+[gd_scene load_steps=5 format=3 uid="uid://b06xxsj1fn3d3"]
 
 [ext_resource type="Script" path="res://npcs/npc_car_cop.gd" id="1_a7e8s"]
 [ext_resource type="Texture2D" uid="uid://bvvtrlpcb837p" path="res://Assets/npccar_cop.png" id="2_ofcie"]
