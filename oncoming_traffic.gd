@@ -10,7 +10,7 @@ var npc_car_purple: PackedScene = load("res://npcs/npc_car_purple.tscn")
 var npc_boat: PackedScene = load("res://npcs/npc_boat.tscn")
 var npc_tank: PackedScene = load("res://npcs/npc_tank.tscn")
 var npc_taxi: PackedScene = load("res://npcs/npc_taxi.tscn")
-
+var npc_cop: PackedScene = load("res://npcs/npc_car_cop.tscn")
 var LANE_ONE: Vector2 = Vector2(LANE_ONE_X, -500)
 
 var obstacle_dict: Dictionary = {
@@ -36,6 +36,10 @@ func create_obstacle(pos, obstacle):
 	npcCar.position = pos
 	get_parent().add_child(npcCar)
 
+func spawn_cop(pos):
+	var npcCar = npc_cop.instantiate()
+	npcCar.position = pos
+	get_parent().add_child(npcCar)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _on_timer_timeout():
