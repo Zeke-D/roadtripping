@@ -4,6 +4,12 @@ extends Node
 var distance = 0
 var police_chase = false
 var level = 0
+var BOOST_MULT_DEFAULT = 1.5
+var boost_multiplier = 1.5
+var BREAK_MULT_DEFAULT = 0.7
+var break_multiplier = 0.7
+var player_health = 3
+
 var npc_car_blue: PackedScene = load("res://npcs/npc_car_blue.tscn")
 var npc_car_purple: PackedScene = load("res://npcs/npc_car_purple.tscn")
 var npc_boat: PackedScene = load("res://npcs/npc_boat.tscn")

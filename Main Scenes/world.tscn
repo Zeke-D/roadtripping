@@ -12,8 +12,7 @@
 [ext_resource type="Script" path="res://Main Scenes/hp_wheel_1.gd" id="5_rkc85"]
 [ext_resource type="AudioStream" uid="uid://b1k377ojstc7f" path="res://Sounds/RT_Car_Crash2.mp3" id="6_74mx0"]
 [ext_resource type="Script" path="res://traffic_timer.gd" id="8_5lghh"]
-[ext_resource type="PackedScene" path="res://npcs/npc_car_cop.tscn" id="8_757vp"]
-[ext_resource type="PackedScene" path="res://npcs/alien_ship.tscn" id="8_wskmv"]
+[ext_resource type="PackedScene" uid="uid://bu0npakla1611" path="res://npcs/alien_ship.tscn" id="8_wskmv"]
 [ext_resource type="Script" path="res://npcs/alien_ship.gd" id="9_tt732"]
 [ext_resource type="AudioStream" uid="uid://dtw5n6etea3gd" path="res://Sounds/police-siren-99029.mp3" id="10_xu3sg"]
 [ext_resource type="Texture2D" uid="uid://bft0tibwycvtv" path="res://Assets/hp_wheel.png" id="14_1hugb"]
@@ -124,9 +123,6 @@ script = ExtResource("5_gykqv")
 [node name="Obstacles" type="CanvasGroup" parent="CanvasGroup"]
 z_index = 1
 position = Vector2(19, -21)
-
-[node name="CopCar" parent="CanvasGroup/Obstacles" instance=ExtResource("8_757vp")]
-position = Vector2(-56, 696)
 
 [node name="Spawner" type="Node2D" parent="."]
 script = ExtResource("1_3dc4a")
