@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://tfvpp1pcykxw"]
+
+[ext_resource type="Script" path="res://end_screen.gd" id="1_bm2s6"]
+[ext_resource type="Script" path="res://EndScreenScore.gd" id="1_pf820"]
+
+[node name="EndScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bm2s6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 0
+offset_left = 605.0
+offset_top = 155.0
+offset_right = 755.0
+offset_bottom = 195.0
+text = "GAME OVER"
+
+[node name="EndScreenScore" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(169, 0)
+layout_mode = 0
+offset_left = 565.0
+offset_top = 202.0
+offset_right = 734.0
+offset_bottom = 242.0
+script = ExtResource("1_pf820")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 619.0
+offset_top = 293.0
+offset_right = 694.0
+offset_bottom = 324.0
+text = "RESTART"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
