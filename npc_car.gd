@@ -8,7 +8,7 @@ var player
 var did_spin = false
 var spin_duration = 2.
 
-# can shoot?
+# can shootw?
 var shooting = false
 
 func get_next_position(delta):

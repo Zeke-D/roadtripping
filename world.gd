@@ -50,7 +50,3 @@ func start_game_over():
 func finish_game_over():
 	get_tree().change_scene_to_file("res://Main Scenes/end_screen.tscn")
 	print("yo frfr")
-
-
-func _on_traffic_timer_timeout():
-	pass # Replace with function body.

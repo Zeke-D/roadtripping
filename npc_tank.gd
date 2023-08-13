@@ -1,7 +1,13 @@
 extends NpcCar
 
 var rocket = load("res://npcs/rocket.tscn")
-self.shooting = true
+
+func _ready():
+	player = get_tree().current_scene.find_child('Car')
+	self.add_to_group("Spinner")
+	self.shooting = true
+	
 func shoot():
-	if shooting:
-		vaelf.add_child(projectile)
+	var projectile = rocket.instantiate()
+	if self.shooting:
+		self.add_child(projectile)
