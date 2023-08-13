@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b0awv4geu16qs" path="res://Assets/base_road.png" id="1_tlry5"]
 [ext_resource type="Script" path="res://world.gd" id="1_vilm6"]
 [ext_resource type="PackedScene" uid="uid://jc02a36m21ag" path="res://background.tscn" id="3_5jjkl"]
-[ext_resource type="Script" path="res://scroll_down.gd" id="4_dh24h"]
+[ext_resource type="Script" path="res://wrapping_background.gd" id="5_gykqv"]
 [ext_resource type="Script" path="res://timer.gd" id="6_ehp6s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rssb8"]
@@ -74,7 +74,7 @@ text = "test"
 
 [node name="Background" parent="CanvasGroup" instance=ExtResource("3_5jjkl")]
 position = Vector2(0, -300)
-script = ExtResource("4_dh24h")
+script = ExtResource("5_gykqv")
 
 [node name="Obstacles" type="CanvasGroup" parent="CanvasGroup"]
 z_index = 1

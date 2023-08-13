@@ -1,4 +1,4 @@
-extends Node2D
+extends BackgroundElement
 
 var distance_label : Label
 var mile_text : String
@@ -11,4 +11,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	# delete when offscreen
+	print(self.position.y)
+	if (self.position.y > 200):
+		print("Gonezo")
+		self.free()

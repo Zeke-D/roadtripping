@@ -6,7 +6,7 @@
 default_font_size = 30
 
 [node name="Polygon2D" type="Polygon2D"]
-position = Vector2(127, 34)
+position = Vector2(11, 200)
 color = Color(0.215686, 0.427451, 0.239216, 1)
 polygon = PackedVector2Array(5, 12, 232, 14, 218, 152, 15, 156)
 script = ExtResource("1_ilob4")

@@ -20,13 +20,15 @@ func _physics_process(delta):
 		
 	count += 1
 	# goal: every 1000m, give a highway sign
-	if (distance - last_highway_sign > 800):
+	if (distance - last_highway_sign > 1000):
 		# make a sign
 		var new_sign = highway_sign.instantiate()
 		new_sign.position = Vector2(100, -500);
 		new_sign.scale = Vector2(.5, .5);
-		new_sign.mile_text = str(int(goal_distance - distance) / 1000)
-		background_root.add_child(new_sign)
+		new_sign.mile_text = str(int(goal_distance - distance) / 1000) + " mi."
+		get_tree().current_scene.add_child(new_sign)
+		new_sign.init()
+		last_highway_sign = distance
 		
 	
 	if (distance >= goal_distance):
