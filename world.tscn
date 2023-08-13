@@ -63,16 +63,15 @@ z_index = 1
 [node name="Camera2D" type="Camera2D" parent="CanvasGroup/Car"]
 zoom = Vector2(2, 2)
 
-[node name="ScoreText" type="RichTextLabel" parent="CanvasGroup/Car"]
-offset_left = -247.0
-offset_top = -137.0
-offset_right = -207.0
-offset_bottom = -97.0
+[node name="ScoreText" type="RichTextLabel" parent="CanvasGroup/Car/Camera2D"]
+offset_left = -256.0
+offset_top = -106.0
+offset_right = -216.0
+offset_bottom = -66.0
 text = "test"
 
 [node name="Background" parent="CanvasGroup" instance=ExtResource("3_5jjkl")]
-position = Vector2(-1, -186)
-scale = Vector2(1, 0.531)
+position = Vector2(0, -300)
 script = ExtResource("4_dh24h")
 
 [node name="Obstacles" type="CanvasGroup" parent="CanvasGroup"]

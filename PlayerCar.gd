@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const BASE_PLAYER_SPEED: Vector2 = Vector2(200, 200)
+const BASE_PLAYER_SPEED: Vector2 = Vector2(200, 300)
 var player_vertical_speed: float = 200
 var world 
 var CAR_WIDTH : float = 32;
@@ -59,6 +59,7 @@ func move(delta):
 	#elapsed += delta
 	self.player_vertical_speed = BASE_PLAYER_SPEED.y * delta * speed_mult
 	self.world.distance += self.player_vertical_speed
+	self.find_child('ScoreText').text = str(int(self.world.distance))
 	self.position.x = new_x_pos
 
 func _physics_process(delta):
