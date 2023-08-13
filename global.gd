@@ -51,7 +51,7 @@ var level_five_enemies : Dictionary = {
 	alien: 20,
 }
 
-var LEVEL_ONE   = Level.new( 5000,  "Desert", level_one_enemies)
+var LEVEL_ONE   = Level.new( 5000,  "Grass", level_one_enemies)
 var LEVEL_TWO   = Level.new( 5000,  "Grass", level_two_enemies)
 var LEVEL_THREE = Level.new(10000, "Desert", level_three_enemies)
 var LEVEL_FOUR  = Level.new(10000, "Desert", level_four_enemies)
