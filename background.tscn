@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://jc02a36m21ag"]
 
 [ext_resource type="Texture2D" uid="uid://c5wysrwsjbryn" path="res://Assets/highway.png" id="1_be1s4"]
-[ext_resource type="Texture2D" path="res://Assets/IMG_0101.PNG" id="2_kugdb"]
-[ext_resource type="Texture2D" path="res://Assets/IMG_0102.PNG" id="3_esl6y"]
+[ext_resource type="Texture2D" uid="uid://de5mp8ehdq5us" path="res://Assets/IMG_0101.PNG" id="2_kugdb"]
+[ext_resource type="Texture2D" uid="uid://crcqvp8ofenf7" path="res://Assets/IMG_0102.PNG" id="3_esl6y"]
 
 [node name="Background" type="Node2D"]
 

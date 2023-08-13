@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxxus3ymc2n3p"]
+
+[ext_resource type="Script" path="res://npcs/npc_car_cop.gd" id="1_a7e8s"]
+[ext_resource type="Texture2D" uid="uid://bvvtrlpcb837p" path="res://Assets/npccar_cop.png" id="2_ofcie"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhxu8"]
+size = Vector2(28, 62)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rt2vb"]
+size = Vector2(28, 62)
+
+[node name="NpcCar" type="CharacterBody2D" groups=["Police"]]
+script = ExtResource("1_a7e8s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_uhxu8")
+
+[node name="BlueCar" type="Sprite2D" parent="."]
+texture = ExtResource("2_ofcie")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("RectangleShape2D_rt2vb")
+
+[connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
