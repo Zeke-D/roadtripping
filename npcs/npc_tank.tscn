@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_llpga"]
 size = Vector2(32, 64)
 
-[node name="npc_tank" type="CharacterBody2D"]
+[node name="npc_tank" type="CharacterBody2D" groups=["Enemy"]]
 script = ExtResource("1_x28xl")
 speed = 20
 

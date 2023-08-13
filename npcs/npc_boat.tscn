@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kqddm"]
 size = Vector2(32, 64)
 
-[node name="npc_boat" type="CharacterBody2D"]
+[node name="npc_boat" type="CharacterBody2D" groups=["Enemy"]]
 script = ExtResource("1_5q70q")
 speed = 40
 

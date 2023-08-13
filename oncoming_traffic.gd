@@ -33,8 +33,8 @@ func get_obstacle(index):
 
 func create_obstacle(position, obstacle):
 	var npcCar: NpcCar = obstacle.instantiate()
+	npcCar.position = position
 	get_parent().add_child(npcCar)
-	npcCar.set_position(position)
 	print(position)
 
 

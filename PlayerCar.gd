@@ -58,8 +58,8 @@ func move(delta):
 	# self.set_rotation(1/4 * PI * sin(elapsed))
 	#elapsed += delta
 	self.player_vertical_speed = BASE_PLAYER_SPEED.y * delta * speed_mult
-	self.world.distance += self.player_vertical_speed
-	self.find_child('ScoreText').text = str(int(self.world.distance))
+	#self.world.distance += self.player_vertical_speed
+	#self.find_child('ScoreText').text = str(int(self.world.distance))
 	self.position.x = new_x_pos
 
 func _physics_process(delta):
