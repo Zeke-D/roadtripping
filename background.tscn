@@ -15,6 +15,7 @@ position = Vector2(0, -300)
 texture = ExtResource("1_be1s4")
 
 [node name="Grass" type="CanvasGroup" parent="."]
+z_index = -1
 position = Vector2(258, 450)
 scale = Vector2(1, 0.937)
 
@@ -203,7 +204,7 @@ position = Vector2(0, -320)
 texture = ExtResource("2_kugdb")
 
 [node name="Desert" type="CanvasGroup" parent="."]
-z_index = -2
+z_index = -4
 position = Vector2(-136, 520)
 
 [node name="Node2D" type="Node2D" parent="Desert"]
