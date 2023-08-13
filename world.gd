@@ -12,6 +12,19 @@ func _ready():
 	global.police_chase = false
 	highway_sign = load("res://highway_sign.tscn");
 	background_root = self.find_child("Background")
+	start_music()
+
+func start_music():
+	if(global.levels[global.level].bg_name == "Grass"):
+		get_tree().current_scene.find_child("Sounds").find_child("grass_background").play()
+	if(global.levels[global.level].bg_name == "Desert"):
+		get_tree().current_scene.find_child("Sounds").find_child("desert_background").play()
+
+func stop_music():
+	if(global.levels[global.level].bg_name == "Grass"):
+		get_tree().current_scene.find_child("Sounds").find_child("grass_background").stop()
+	if(global.levels[global.level].bg_name == "Desert"):
+		get_tree().current_scene.find_child("Sounds").find_child("desert_background").stop()
 
 func handle_background():
 	
@@ -45,6 +58,7 @@ func _physics_process(delta):
 		
 	
 	if (global.distance >= global.levels[global.level].distance):
+		stop_music()
 		get_tree().change_scene_to_file("res://Main Scenes/checkpoint.tscn")
 		global.level += 1
 
@@ -54,4 +68,5 @@ func start_game_over():
 	tween.tween_callback(finish_game_over).set_delay(2)
 
 func finish_game_over():
+	stop_music()
 	get_tree().change_scene_to_file("res://Main Scenes/end_screen.tscn")

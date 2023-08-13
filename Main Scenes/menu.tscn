@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://q1rmedw22cdn"]
+[gd_scene load_steps=5 format=3 uid="uid://q1rmedw22cdn"]
 
 [ext_resource type="Script" path="res://Main Scenes/start_button.gd" id="1_ewvos"]
 [ext_resource type="Texture2D" uid="uid://c0ss1lyela5as" path="res://Assets/UI/start_screen.png" id="1_qr3u7"]
 [ext_resource type="Texture2D" uid="uid://cyr5obtho33vf" path="res://Assets/UI/start_button.png" id="2_81lhm"]
+[ext_resource type="AudioStream" uid="uid://5rl1igfwvnmq" path="res://Assets/music/country_menu_music.mp3" id="4_06lql"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -25,5 +26,8 @@ offset_right = 670.0
 offset_bottom = 460.0
 icon = ExtResource("2_81lhm")
 script = ExtResource("1_ewvos")
+
+[node name="menu_music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_06lql")
 
 [connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]

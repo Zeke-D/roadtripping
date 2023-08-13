@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c4a0t2vn7bw41"]
+[gd_scene load_steps=21 format=3 uid="uid://c4a0t2vn7bw41"]
 
 [ext_resource type="PackedScene" uid="uid://dn2511q50ob5p" path="res://player_car.tscn" id="1_0pryi"]
 [ext_resource type="Script" path="res://oncoming_traffic.gd" id="1_3dc4a"]
@@ -14,7 +14,10 @@
 [ext_resource type="Script" path="res://traffic_timer.gd" id="8_5lghh"]
 [ext_resource type="PackedScene" uid="uid://bu0npakla1611" path="res://npcs/alien_ship.tscn" id="8_wskmv"]
 [ext_resource type="AudioStream" uid="uid://dtw5n6etea3gd" path="res://Sounds/police-siren-99029.mp3" id="10_xu3sg"]
+[ext_resource type="AudioStream" uid="uid://dmipmadj88otu" path="res://Assets/music/Grasslands_background_music.mp3" id="12_fi6wk"]
+[ext_resource type="AudioStream" uid="uid://by6ebadmms00s" path="res://Assets/music/Desert_background_music.mp3" id="13_pqfor"]
 [ext_resource type="Texture2D" uid="uid://bft0tibwycvtv" path="res://Assets/hp_wheel.png" id="14_1hugb"]
+[ext_resource type="AudioStream" uid="uid://5rl1igfwvnmq" path="res://Assets/music/country_menu_music.mp3" id="14_jg1od"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rssb8"]
 texture = ExtResource("1_tlry5")
@@ -133,6 +136,15 @@ script = ExtResource("8_5lghh")
 
 [node name="Idle_sound" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("4_rgqk3")
+
+[node name="grass_background" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("12_fi6wk")
+
+[node name="desert_background" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("13_pqfor")
+
+[node name="menu_music" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("14_jg1od")
 
 [node name="Police_sirens" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("10_xu3sg")
