@@ -13,16 +13,12 @@ var npc_taxi: PackedScene = load("res://npcs/npc_taxi.tscn")
 var npc_cop: PackedScene = load("res://npcs/npc_car_cop.tscn")
 var LANE_ONE: Vector2 = Vector2(LANE_ONE_X, -500)
 
-var obstacle_dict_1: Dictionary = {
+var obstacle_dict: Dictionary = {
 	npc_car_blue: 30,
 	npc_car_purple: 30,
 	npc_taxi: 20,
 	npc_tank: 5,
 	npc_boat: 15
-}
-
-var obstacle_dict: Dictionary = {
-	npc_tank: 100
 }
 
 func get_lane(lane_index: int):
