@@ -86,19 +86,24 @@ func spinout(direction):
 	move_and_rotate(direction * Vector2(1200, 600) * .25, 
 		self.rotation + TAU * 2.64, spin_duration)
 
-func _on_hurtbox_body_entered(body):
-	if body.is_in_group("Enemy") and state != CarState.DEAD:
+
+func take_damage(body):
+	
+	if body.is_in_group("Police"):
+		state = CarState.DEAD
+	
+	if body.is_in_group("Civilian") and !global.police_chase:
+		get_tree().current_scene.find_child("Spawner").spawn_cop(self.position + Vector2(0, 400))
+	
+	if body.is_in_group("Enemy"):
 		print("HIT")
 		get_tree().current_scene.find_child("Sounds").find_child("Car_hit").play()
 		state -= 1
+	
+	if body.is_in_group("Spinner"):
 		body.spinout((body.position - self.position).normalized())
-		if state == CarState.DEAD:
-			self.spinout(-(body.position - self.position).normalized())
-		elif body.is_in_group("Civilian") and !global.police_chase:
-			get_tree().current_scene.find_child("Spawner").spawn_cop(self.position + Vector2(0, 400))
-			
-	if body.is_in_group("Police") and state != CarState.DEAD:
-		state = 0
+
+	if state == CarState.DEAD:
 		self.spinout(-(body.position - self.position).normalized())
 	if body.is_in_group("Projectile"):
 		state -= 1
@@ -108,6 +113,3 @@ func _on_hurtbox_body_entered(body):
 		state -= 1
 		body.queue_free()
 		body.get_parent().queue_free()
-	if state == CarState.DEAD:
-		self.spinout(-(body.position - self.position).normalized())
-		return

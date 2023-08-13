@@ -19,6 +19,7 @@ func get_next_position(delta):
 
 func _ready():
 	player = get_tree().current_scene.find_child('Car')
+	self.add_to_group("Spinner")
 
 func _physics_process(delta):
 	position = get_next_position(delta)
