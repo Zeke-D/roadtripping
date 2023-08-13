@@ -6,8 +6,8 @@
 [ext_resource type="Script" path="res://world.gd" id="1_vilm6"]
 [ext_resource type="PackedScene" uid="uid://jc02a36m21ag" path="res://background.tscn" id="3_5jjkl"]
 [ext_resource type="Script" path="res://wrapping_background.gd" id="5_gykqv"]
-[ext_resource type="Script" path="res://timer.gd" id="6_ehp6s"]
-[ext_resource type="PackedScene" uid="uid://bxxus3ymc2n3p" path="res://npcs/npc_car_cop.tscn" id="8_757vp"]
+[ext_resource type="Script" path="res://traffic_timer.gd" id="8_5lghh"]
+[ext_resource type="PackedScene" path="res://npcs/npc_car_cop.tscn" id="8_757vp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rssb8"]
 texture = ExtResource("1_tlry5")
@@ -83,11 +83,10 @@ position = Vector2(19, -21)
 [node name="CopCar" parent="CanvasGroup/Obstacles" instance=ExtResource("8_757vp")]
 position = Vector2(-56, 696)
 
-[node name="TrafficTimer" type="Timer" parent="."]
-autostart = true
-script = ExtResource("6_bhynb")
-
 [node name="Spawner" type="Node2D" parent="."]
 script = ExtResource("1_3dc4a")
 
-[connection signal="timeout" from="TrafficTimer" to="Spawner" method="_on_timer_timeout"]
+[node name="TrafficTimer" type="Timer" parent="."]
+script = ExtResource("8_5lghh")
+
+[connection signal="timeout" from="TrafficTimer" to="Spawner" method="_on_traffic_timer_timeout"]

@@ -6,7 +6,7 @@
 script/source = "extends Node
 
 var player
-const MOVEMENT_SPEED: float = 150
+const MOVEMENT_SPEED: float = 190
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player = get_tree().current_scene.find_child('Car')
