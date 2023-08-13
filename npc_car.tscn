@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://68akutqjhpfw" path="res://Assets/npccar.png" id="1_v3o14"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uhxu8"]
-size = Vector2(32, 64)
+size = Vector2(28, 62)
 
 [node name="NpcCar" type="CharacterBody2D" groups=["Enemy"]]
 
